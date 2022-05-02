@@ -1,6 +1,20 @@
 site_name: Nybble Docs
 site_url: https://docs.nybble-security.io/
+site_description: Nybble documentation website.
+site_author: Nybble Engineering Team
 nav:
  - Home: index.md
  - About: about.md
+ - Nybble Security Analytics:
+   - Overview: nsa/overview.md
+   - Release Notes: nsa/release-notes.md 
+   - Windows Agent: nsa/windows-agent.md
+   - Linux Agent: nsa/linux-agent.md
+   - Firewall: nsa/firewall.md
+   - Core Switches: nsa/core-switches.md
+ - Nybble Hub:
+   - Overview: nybble-hub/overview.md
+   - Release Notes: nybble-hub/release-notes.md
 theme: readthedocs
+extra_css: [extra.css]
+copyright: Copyright &copy; 2022 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
