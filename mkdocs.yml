@@ -1,0 +1,6 @@
+site_name: Nybble Docs
+site_url: https://docs.nybble-security.io/
+nav:
+ - Home: index.md
+ - About: about.md
+theme: readthedocs
