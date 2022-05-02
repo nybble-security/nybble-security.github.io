@@ -35,6 +35,7 @@ a:hover {
 
 .wy-nav-content {
   max-width: 1300px;
+  min-height: 100vh;
 }
 
 .wy-nav-top {
