@@ -3,17 +3,16 @@ site_url: https://docs.nybble-security.io/
 site_description: Nybble documentation website.
 site_author: Nybble Engineering Team
 nav:
- - Home: index.md
- - About: about.md
+ - Accueil: index.md
  - Nybble Security Analytics:
-   - Overview: nsa/overview.md
+   - A Propos: nsa/overview.md
    - Release Notes: nsa/release-notes.md 
-   - Windows Agent: nsa/windows-agent.md
-   - Linux Agent: nsa/linux-agent.md
-   - Firewall: nsa/firewall.md
-   - Core Switches: nsa/core-switches.md
+   - Intégrer un Windows: nsa/windows-onboarding.md
+   - Intégrer un Linux: nsa/linux-onboarding.md
+   - Intégrer un Firewall: nsa/firewall-onboarding.md
+   - Intégrer un équipement réseau: nsa/network-equipments-onboarding.md
  - Nybble Hub:
-   - Overview: nybble-hub/overview.md
+   - A Propos: nybble-hub/overview.md
    - Release Notes: nybble-hub/release-notes.md
 theme: readthedocs
 extra_css: [extra.css]
