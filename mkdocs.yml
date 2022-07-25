@@ -3,18 +3,20 @@ site_url: https://docs.nybble-security.io/
 site_description: Nybble documentation website.
 site_author: Nybble Engineering Team
 nav:
- - Accueil: index.md
+ - Home: index.md
  - Nybble Security Analytics:
-   - A Propos: nsa/overview.md
+   - About: nsa/overview.md
    - Release Notes: nsa/release-notes.md 
-   - Appliance centrale Filebeat: nsa/filebeat-appliance.md
-   - Intégrer un Windows: nsa/windows-onboarding.md
-   - Intégrer un Linux: nsa/linux-onboarding.md
-   - Intégrer un Firewall: nsa/firewall-onboarding.md
-   - Intégrer un équipement réseau: nsa/network-equipments-onboarding.md
+   - Filebeat central appliance: nsa/filebeat-appliance.md
+   - Onboard a Windows: nsa/windows-onboarding.md
+   - Onboard a Linux: nsa/linux-onboarding.md
+   - Onboard a Firewall: nsa/firewall-onboarding.md
+   - Onboard a Network device: nsa/network-equipments-onboarding.md
  - Nybble Hub:
-   - A Propos: nybble-hub/overview.md
+   - About: nybble-hub/overview.md
    - Release Notes: nybble-hub/release-notes.md
 theme: readthedocs
 extra_css: [extra.css]
 copyright: Copyright &copy; 2022 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
+extra:
+  version: "2022.07.25"
