@@ -1,10 +1,10 @@
 p {
   text-align: justify;
 }
-a {
+a, a:visited {
   text-decoration: none;
   color: #29bdb8;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 a:hover {
@@ -101,4 +101,55 @@ a.icon-home:hover {
 {
   color:#29bdb8;
   font-weight: bold;
+}
+
+
+/* TABS */
+/* Tab style starts here */
+.tabbed-set {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  box-shadow: 0 0 0.2em #b7b7b8;
+}
+
+.tabbed-set > input {
+  display: none;
+}
+
+.tabbed-set label {
+  width: auto;
+  padding: 0.9375em 1.25em 0.78125em;
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 0.15rem solid transparent;
+  border-top-left-radius: 0.1rem;
+  border-top-right-radius: 0.1rem;
+  cursor: pointer;
+  transition: background-color 250ms, color 250ms;
+}
+
+.tabbed-set .tabbed-content {
+  width: 100%;
+  display: none;
+  /*box-shadow: 0 -.05rem #ddd;*/
+}
+
+.tabbed-set input {
+  position: absolute;
+  opacity: 0;
+}
+
+.tabbed-set input:checked:nth-child(n+1) + label {
+  color: #29bdb8;
+  border-color: #29bdb8;
+}
+
+.tabbed-set input:nth-child(n+1):checked + label + .tabbed-content {
+  order: 99;
+  display: block;
 }
