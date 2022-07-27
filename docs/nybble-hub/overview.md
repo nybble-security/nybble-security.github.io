@@ -1,2 +1,3 @@
+<center>![Screenshot](../img/nybble-hub.png)</center>
 # Nybble Hub
-Contenu à venir
+

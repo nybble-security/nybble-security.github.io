@@ -75,12 +75,14 @@ Then start the program :
 === "Debian"
 
     ```
+    sudo systemctl enable filebeat.service    # enable at boot
     sudo service filebeat start
     ```
 
 === "CentOS"
 
     ```
+    sudo systemctl enable filebeat.service    # enable at boot
     sudo service filebeat start
     ```
 

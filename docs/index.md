@@ -1,7 +1,7 @@
-# Bienvenue sur la documentation Nybble
+# Welcome into Nybble docs
 
-Ce site regroupe l'ensemble des documentations des produits Nybble.
+This site hosts the documentation of all Nybble products.
 
-Utilisez le menu de gauche pour atteindre la catégorie de produit souhaitée, ou la barre de recherche afin de chercher dans l'ensemble des documentations disponibles.
+Use the left menu to browse the product categories, or use the search bar to find keywords in the whole available documentations.
 
-Toute suggestion ou remarque est la bienvenue à [contact@nybble.bzh](mailto:contact@nybble.bzh).
+Feel free to send a mail to [contact@nybble.bzh](mailto:contact@nybble.bzh) for any remarks or suggestions.

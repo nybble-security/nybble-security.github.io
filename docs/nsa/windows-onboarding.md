@@ -1,2 +1,2 @@
-# Nybble Security Analytics: Intégrer un Windows
-Contenu à venir
+# Nybble Security Analytics: Onboard a Windows
+Stay tuned, more to come.

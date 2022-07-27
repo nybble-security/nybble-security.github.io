@@ -1,2 +1,2 @@
-# Nybble Security Analytics: Intégrer un Firewall
-Contenu à venir
+# Nybble Security Analytics: Onboard a Firewall
+Stay tuned, more to come.

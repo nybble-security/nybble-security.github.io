@@ -1,3 +1,3 @@
 # Nybble Security Analytics: Onboard a Linux
-Contenu à venir
+Stay tuned, more to come.
 

@@ -1,6 +1,15 @@
 p {
   text-align: justify;
 }
+
+div.section p + ul {
+  margin-top: -20px;
+}
+
+div.section p + ol {
+  margin-top: -20px;
+}
+
 a, a:visited {
   text-decoration: none;
   color: #29bdb8;
