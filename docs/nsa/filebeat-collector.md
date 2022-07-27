@@ -1,5 +1,5 @@
-# Nybble Security Analytics: Filebeat appliance
-This appliance aims to act as a central event aggregator for your firewalls, network equipments ...
+# Nybble Security Analytics: Filebeat collector
+Filebeat aims to act as a central event collector for your firewalls, network equipments ...
 
 ## Before you begin
 Connect to [Nybble Hub](https://hub.nybble-analytics.io/settings/agents){target=_blank} at the Settings section to download the Filebeat configuration files.

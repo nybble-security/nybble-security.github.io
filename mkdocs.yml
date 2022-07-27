@@ -7,7 +7,7 @@ nav:
  - Nybble Security Analytics:
    - About: nsa/overview.md
    - Release Notes: nsa/release-notes.md 
-   - Filebeat central appliance: nsa/filebeat-appliance.md
+   - Filebeat central collector: nsa/filebeat-collector.md
    - Onboard a Windows: nsa/windows-onboarding.md
    - Onboard a Linux: nsa/linux-onboarding.md
    - Onboard a Firewall: nsa/firewall-onboarding.md
