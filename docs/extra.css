@@ -103,9 +103,7 @@ a.icon-home:hover {
   font-weight: bold;
 }
 
-
 /* TABS */
-/* Tab style starts here */
 .tabbed-set {
   position: relative;
   display: flex;
