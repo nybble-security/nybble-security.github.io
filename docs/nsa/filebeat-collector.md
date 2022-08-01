@@ -2,7 +2,10 @@
 Filebeat aims to act as a central event collector for your firewalls, network equipments ...
 
 ## Before you begin
-Connect to [Nybble Hub](https://hub.nybble-analytics.io/settings/agents){target=_blank} at the Settings section to download the Filebeat configuration files.
+Connect to [Nybble Hub](https://hub.nybble-analytics.io/settings/agents){target=_blank} at the Settings section to:
+
+* download the Filebeat configuration files
+* grab your client short name: it will be used in network rules.
 
 ## Sizing
 
