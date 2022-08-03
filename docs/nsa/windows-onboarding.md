@@ -9,7 +9,7 @@ Connect to [Nybble Hub](https://hub.nybble-analytics.io/settings/agents){target=
 
 ## Winlogbeat installation
 
-Winlogbeat itself has no sizing requirements: it's a lightweight agent.
+Winlogbeat itself has no sizing requirements: it's a lightweight agent (less than 2% CPU).
 
 1. Extract the contents of winlogbeat-package into C:\Program Files.
 2. Rename the winlogbeat-<version> directory to Winlogbeat.
@@ -17,13 +17,13 @@ Winlogbeat itself has no sizing requirements: it's a lightweight agent.
 4. From the PowerShell prompt, run the following commands to install the service.
 ```
 PS C:\Users\Administrator> cd 'C:\Program Files\Winlogbeat'
-PS C:\Program Files\Winlogbeat> .\install-service-winlogbeat.ps1
+PS C:\Program Files\Winlogbeat> .\nybble-install-service-winlogbeat.ps1
 
 Security warning
 Run only scripts that you trust. While scripts from the internet can be useful,
 this script can potentially harm your computer. If you trust this script, use
 the Unblock-File cmdlet to allow the script to run without this warning message.
-Do you want to run C:\Program Files\Winlogbeat\install-service-winlogbeat.ps1?
+Do you want to run C:\Program Files\Winlogbeat\nybble-install-service-winlogbeat.ps1?
 [D] Do not run  [R] Run once  [S] Suspend  [?] Help (default is "D"): R
 
 Status   Name               DisplayName
@@ -32,7 +32,7 @@ Stopped  winlogbeat         winlogbeat
 ```
 !!! note 
     If script execution is disabled on your system, you need to set the execution policy for the current session to allow the script to run.  
-    Example: `powershell.exe -ExecutionPolicy unrestricted -file .\install-service-winlogbeat.ps1`
+    Example: `powershell.exe -ExecutionPolicy unrestricted -file .\nybble-install-service-winlogbeat.ps1`
 
 ## Network rules
 

@@ -9,7 +9,7 @@ Connect to [Nybble Hub](https://hub.nybble-analytics.io/settings/agents){target=
 
 ## Sizing
 
-Filebeat itself has no sizing requirements: it's a lightweight agent.  
+Filebeat itself has no sizing requirements: it's a lightweight agent (less than 2% CPU).  
 Nybble recommends using a dedicated VM / Server to run it, as there will be incoming / outgoing network rules to create later.  
 System specifications can remain the usual ones in your company.  
 
