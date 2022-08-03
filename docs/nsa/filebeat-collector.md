@@ -105,4 +105,4 @@ Filebeat agent requires following network rule to communicate with Nybble's serv
 | filebeat server | `<clientshortname>-kafka-bootstrap.nybble-analytics.io` <br> `<clientshortname>-kafka-broker-[0-9].nybble-analytics.io` | TCP 9094 | Event sending |
 
 ## What's next
-You can start to onboard [firewalls](https://docs.nybble-security.io/nsa/firewall-onboarding/) or [network devices](https://docs.nybble-security.io/nsa/network-equipments-onboarding/).
+You can start to onboard [firewalls](firewall-onboarding.md) or [network devices](network-equipments-onboarding.md).
