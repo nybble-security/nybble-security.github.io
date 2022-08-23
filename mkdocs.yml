@@ -13,12 +13,18 @@ nav:
    - Onboard a Network device: nsa/network-equipments-onboarding.md
  - Nybble Hub:
    - About: nybble-hub/overview.md
+   - Alert Triage: nybble-hub/alert-triage.md
+   - Dashboards: nybble-hub/dashboards.md
+   - Investigations: nybble-hub/investigations.md
+   - Hunt Campaigns (clients): nybble-hub/hunts-clients.md
+   - Hunt Campaigns (hunters): nybble-hub/hunts-hunters.md
+   - Profile: nybble-hub/profile.md
    - Release Notes: nybble-hub/release-notes.md
 theme: readthedocs
 extra_css: [extra.css]
 copyright: Copyright &copy; 2022 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
 extra:
-  version: "2022.07.27"
+  version: "2022.08.23"
 markdown_extensions:
   - attr_list
   - admonition
