@@ -1,5 +1,11 @@
 # Nybble Hub: Release Notes
 
+## Release 2022.09.01 - Cirrostratus
+
+ - fixing investigation display bug
+ - internal quality code review and enhancement 
+ - 1st release of user guides
+
 ## Release 2022.08.01 - Nimbostratus
 
  - settings menu for clients, to download configuration files
