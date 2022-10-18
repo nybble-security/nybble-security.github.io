@@ -9,8 +9,8 @@ nav:
    - Filebeat central collector: nsa/filebeat-collector.md
    - Onboard a Windows: nsa/windows-onboarding.md
    - Onboard a Linux: nsa/linux-onboarding.md
-   - Onboard a Firewall: nsa/firewall-onboarding.md
-   - Onboard a Network device: nsa/network-equipments-onboarding.md
+   - Onboard a Fortinet device: nsa/fortinet-onboarding.md
+   - Onboard a Cisco device: nsa/cisco-onboarding.md
  - Nybble Hub:
    - About: nybble-hub/overview.md
    - Alert Triage: nybble-hub/alert-triage.md

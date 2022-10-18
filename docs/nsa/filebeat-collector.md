@@ -14,28 +14,30 @@ Nybble recommends using a dedicated VM / Server to run it, as there will be inco
 System specifications can remain the usual ones in your company.  
 
 ## Filebeat installation
+!!! note 
+    Nybble recommands using the 7.10.2 version as all configurations were validated with this version.  
 
 To download and install Filebeat, use the commands that work with your operating system ([compatibility matrix](https://www.elastic.co/fr/support/matrix){target=_blank}):
 
 === "Debian"
 
     ```
-    curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.3.2-amd64.deb
-    sudo dpkg -i filebeat-8.3.2-amd64.deb
+    curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.10.2-amd64.deb
+    sudo dpkg -i filebeat-7.10.2-amd64.deb
     ```
 
 === "CentOS"
 
     ```
-    curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-8.3.2-x86_64.rpm
-    sudo rpm -vi filebeat-8.3.2-x86_64.rpm
+    curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.10.2-x86_64.rpm
+    sudo rpm -vi filebeat-7.10.2-x86_64.rpm
     ```
 
 === "Windows"
 
-    1. Download the Filebeat Windows zip file from the downloads page.
+    1. Download the Filebeat Windows zip file: [Filebeat 7.10.2 on Elastic website](https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.10.2-windows-x86_64.zip)
     2. Extract the contents of the zip file into C:\Program Files.
-    3. Rename the filebeat-<version>-windows directory to Filebeat.
+    3. Rename the filebeat-7.10.2-windows directory to Filebeat.
     4. Open a PowerShell prompt as an Administrator (right-click the PowerShell icon and select Run As Administrator).
     5. From the PowerShell prompt, run the following commands to install Filebeat as a Windows service:
     ```
@@ -105,4 +107,4 @@ Filebeat agent requires following network rule to communicate with Nybble's serv
 | filebeat server | `<clientshortname>-kafka-bootstrap.nybble-analytics.io` <br> `<clientshortname>-kafka-broker-[0-9].nybble-analytics.io` | TCP 9094 | Event sending |
 
 ## What's next
-You can start to onboard [firewalls](firewall-onboarding.md) or [network devices](network-equipments-onboarding.md).
+You can start to onboard devices (firewalls, network equipments) by selecting the according page in the left menu (by vendor).
