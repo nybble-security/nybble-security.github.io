@@ -1,5 +1,13 @@
 # Nybble Hub: Release Notes
 
+## Release 2022.10.01 - Altocumulus
+
+- Single Sign On 🔐 is globally available:
+    - clients, analysts and hunters can now access both SIEM(s) and Hub using the same credentials and login only once per browser
+    - security enforcement by requiring a 2nd factor authentication (MFA)
+    - password reset by receiving a temporary link by mail
+- fixing issue on configuration download
+
 ## Release 2022.09.01 - Cirrostratus
 
  - fixing investigation display bug

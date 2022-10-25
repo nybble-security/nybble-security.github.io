@@ -96,7 +96,7 @@ a.icon-home:hover {
 }
 
 
-.rst-content .section ul li
+.rst-content .section ul li, .rst-content .section ul li li
 {
     list-style-type:none;
 }
