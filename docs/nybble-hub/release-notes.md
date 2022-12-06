@@ -1,5 +1,14 @@
 # Nybble Hub: Release Notes
 
+## Release 2022.12.01 - Cirrocumulus
+
+- Nybble Hub mobile edition: all views are now optimized for mobile display
+
+## Release 2022.11.01 - Cumulonimbus
+
+- Implementing APIKEYs per user: you can interact with our API from 3rd party tools
+- Fixing download issues after SSO implementation
+
 ## Release 2022.10.01 - Altocumulus
 
 - Single Sign On 🔐 is globally available:
