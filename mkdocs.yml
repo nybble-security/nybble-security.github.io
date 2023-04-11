@@ -6,6 +6,7 @@ nav:
  - Home: index.md
  - Nybble Hub:
    - About: nybble-hub/overview.md
+   - Authentication: nybble-hub/authentication.md
    - Alert Triage: nybble-hub/alert-triage.md
    - Dashboards: nybble-hub/dashboards.md
    - Investigations: nybble-hub/investigations.md
