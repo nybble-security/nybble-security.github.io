@@ -1,5 +1,13 @@
 # Nybble Hub: Release Notes
 
+## Release 2023.02.01 - Babiroussas
+- fixing display glitch on Investigation Details
+- Alerts: clicking on Elastic field opens the SIEM with accurate filter
+
+## Release 2023.01.01 - Narval
+
+- Official support for Elastic (Bring your Own SIEM)
+
 ## Release 2022.12.01 - Cirrocumulus
 
 - Nybble Hub mobile edition: all views are now optimized for mobile display

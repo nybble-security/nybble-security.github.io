@@ -4,27 +4,36 @@ site_description: Nybble documentation website.
 site_author: Nybble Engineering Team
 nav:
  - Home: index.md
- - Nybble Security Analytics:
-   - About: nsa/overview.md
-   - Filebeat central collector: nsa/filebeat-collector.md
-   - Onboard a Windows: nsa/windows-onboarding.md
-   - Onboard a Linux: nsa/linux-onboarding.md
-   - Onboard a Fortinet device: nsa/fortinet-onboarding.md
-   - Onboard a Cisco device: nsa/cisco-onboarding.md
  - Nybble Hub:
    - About: nybble-hub/overview.md
+   - Authentication: nybble-hub/authentication.md
    - Alert Triage: nybble-hub/alert-triage.md
    - Dashboards: nybble-hub/dashboards.md
    - Investigations: nybble-hub/investigations.md
-   - Hunt Campaigns (clients): nybble-hub/hunts-clients.md
-   - Hunt Campaigns (hunters): nybble-hub/hunts-hunters.md
+   #- Hunt Campaigns (clients): nybble-hub/hunts-clients.md
+   #- Hunt Campaigns (hunters): nybble-hub/hunts-hunters.md
    - Profile: nybble-hub/profile.md
    - Release Notes: nybble-hub/release-notes.md
+ - Bring Your Own SIEM:
+   - About: connectors/overview.md
+   - Elastic (configuration): connectors/elastic-configuration.md
+   - Elastic (connector): connectors/elastic-connector.md
+   #- Splunk (configuration): connectors/splunk-configuration.md
+   #- Splunk (connector): connectors/splunk-connector.md
+   #- QRadar (configuration): connectors/qradar-configuration.md
+   #- QRadar (connector): connectors/qradar-connector.md
+ - Elastic by Nybble:
+   - About: elastic-by-nybble/overview.md
+   - Filebeat central collector: elastic-by-nybble/filebeat-collector.md
+   - Onboard a Windows: elastic-by-nybble/windows-onboarding.md
+   - Onboard a Linux: elastic-by-nybble/linux-onboarding.md
+   - Onboard a Fortinet device: elastic-by-nybble/fortinet-onboarding.md
+   - Onboard a Cisco device: elastic-by-nybble/cisco-onboarding.md
 theme: readthedocs
 extra_css: [extra.css]
-copyright: Copyright &copy; 2022 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
+copyright: Copyright &copy; 2023 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
 extra:
-  version: "2022.10.18"
+  version: "2023.02.01"
 markdown_extensions:
   - attr_list
   - admonition
