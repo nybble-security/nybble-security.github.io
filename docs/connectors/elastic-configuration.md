@@ -7,7 +7,7 @@
 Nybble analysts and hunters requires an access to your SIEM in order to complete their investigations.  
 This access is limited:  
 
- * dedicated space, with access to specific features
+ * dedicated space, with access to specific features, with its specific dataview
  * restricted role, where you can restrict indexes
 
 On top, we're connecting our SSO solution to your cluster, avoiding account management on your side. Our SSO is MFA enabled and restricted to the specific space.
