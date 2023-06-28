@@ -1,6 +1,17 @@
 # Nybble Hub: Release Notes
 
+## Release 2023.06.01 - Sunda Colugo
+
+- A Nybbler can be both analyst and hunter now
+- improved elastic connector speed
+
+## Release 2023.05.01 - Dumbo Octopus
+
+- client can now download custom logstash configuration to deploy central agent (Elastic By Nybble)
+- internal components global update
+
 ## Release 2023.02.01 - Babiroussas
+
 - fixing display glitch on Investigation Details
 - Alerts: clicking on Elastic field opens the SIEM with accurate filter
 
