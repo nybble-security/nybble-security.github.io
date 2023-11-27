@@ -1,5 +1,13 @@
 # Nybble Hub: Release Notes
 
+## Release 2023.09.01 - Dugong
+
+- 1st release of sending alert results back to MSSPs (TheHive supported)
+- Alerts: improvements following Hacktoberfest CTF feedback
+- Threat Hunting Campaigns: improvements following Hacktoberfest CTF feedback
+- Language is now determined by Browser as default
+- internal components global update
+
 ## Release 2023.06.01 - Sunda Colugo
 
 - A Nybbler can be both analyst and hunter now
