@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200..900&display=swap');
 
 body, *, .btn, h1, h2, h3, h4, h5, h6 {
   font-family: 'Poppins', sans-serif;
@@ -67,9 +67,13 @@ li.toctree-l2 >a,
   background-color: #7FCBF54D;
 }
 
-.wy-menu-vertical li.current>a button.toctree-expand,
+.wy-menu-vertical li.toctree-l2 a:hover button.toctree-expand,
 .wy-menu-vertical li.current>a:hover button.toctree-expand,
-.wy-menu-vertical a:hover button.toctree-expand,
+.wy-menu-vertical a:hover button.toctree-expand {
+  color: #005F93;
+}
+
+.wy-menu-vertical li.current>a button.toctree-expand,
 .wy-menu-vertical li.toctree-l2 button.toctree-expand {
   color: white
 }
