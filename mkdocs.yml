@@ -13,15 +13,12 @@ nav:
    #- Hunt Campaigns (clients): nybble-hub/hunts-clients.md
    #- Hunt Campaigns (hunters): nybble-hub/hunts-hunters.md
    - Profile: nybble-hub/profile.md
+   - Registration: nybble-hub/register.md
    - Release Notes: nybble-hub/release-notes.md
  - Bring Your Own SIEM:
    - About: connectors/overview.md
    - Elastic (configuration): connectors/elastic-configuration.md
    - Elastic (connector): connectors/elastic-connector.md
-   #- Splunk (configuration): connectors/splunk-configuration.md
-   #- Splunk (connector): connectors/splunk-connector.md
-   #- QRadar (configuration): connectors/qradar-configuration.md
-   #- QRadar (connector): connectors/qradar-connector.md
  - Elastic by Nybble:
    - About: elastic-by-nybble/overview.md
    - Filebeat central collector: elastic-by-nybble/filebeat-collector.md
@@ -33,7 +30,7 @@ theme: readthedocs
 extra_css: [extra.css]
 copyright: Copyright &copy; 2023 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
 extra:
-  version: "2023.10.01"
+  version: "2023.12.01"
 markdown_extensions:
   - attr_list
   - admonition
