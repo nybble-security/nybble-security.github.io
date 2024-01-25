@@ -1,5 +1,14 @@
 # Nybble Hub: Release Notes
 
+## Release 2023.12.01 - Pacu
+- Hub homepage rebranding, following new Nybble styling guidelines
+- Display registration infos in your profile
+- Alerts: additional context datas coming from clients are displayed in wiki side.
+- Registration & dojo platform:
+    - full history of your registration & tests
+    - test retries
+- internal components global update and security improvements
+
 ## Release 2023.10.01 - Glaucus atlanticus
 
 - PRIVATE BETA: registration process for analysts:
