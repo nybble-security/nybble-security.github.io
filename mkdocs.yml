@@ -21,13 +21,13 @@ nav:
    - About: connectors/overview.md
    - Elastic (configuration): connectors/elastic-configuration.md
    - Elastic (connector): connectors/elastic-connector.md
- - Elastic by Nybble:
-   - About: elastic-by-nybble/overview.md
-   - Filebeat central collector: elastic-by-nybble/filebeat-collector.md
-   - Onboard a Windows: elastic-by-nybble/windows-onboarding.md
-   - Onboard a Linux: elastic-by-nybble/linux-onboarding.md
-   - Onboard a Fortinet device: elastic-by-nybble/fortinet-onboarding.md
-   - Onboard a Cisco device: elastic-by-nybble/cisco-onboarding.md
+#  - Elastic by Nybble:
+#    - About: elastic-by-nybble/overview.md
+#    - Filebeat central collector: elastic-by-nybble/filebeat-collector.md
+#    - Onboard a Windows: elastic-by-nybble/windows-onboarding.md
+#    - Onboard a Linux: elastic-by-nybble/linux-onboarding.md
+#    - Onboard a Fortinet device: elastic-by-nybble/fortinet-onboarding.md
+#    - Onboard a Cisco device: elastic-by-nybble/cisco-onboarding.md
 theme: readthedocs
 extra_css: [extra.css]
 copyright: Copyright &copy; 2024 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
@@ -63,18 +63,18 @@ plugins:
             Hunt Campaigns (clients): "Campagnes"
             Hunt Campaigns (hunters): "Campagnes"
             Profile: "Profil"
-            Registration: "Enregistrement"
+            Registration: "Inscription"
             Privacy policy: "Politique de Confidentialité"
             Release Notes: "Notes de version"
             Bring Your Own SIEM: "Bring Your Own SIEM"
             Elastic (configuration): "Configurer Elastic"
             Elastic (connector): "Connecteur Elastic"
             Elastic by Nybble: "Elastic By Nybble"
-            Filebeat central collector: "Collecteur Filebeat"
-            Onboard a Windows: "Ajouter un Windows"
-            Onboard a Linux: "Ajouter un Linux"
-            Onboard a Fortinet device: "Ajouter un Fortinet"
-            Onboard a Cisco device: "Ajouter un Cisco"
+            Filebeat central collector: "Filebeat collector (en)"
+            Onboard a Windows: "Onboard a Windows (en)"
+            Onboard a Linux: "Onboard a Linux (en)"
+            Onboard a Fortinet device: "Onboard a Fortinet (en)"
+            Onboard a Cisco device: "Onboard a Cisco (en)"
             Terms and Conditions: "Conditions Générales d'Utilisation"
         
 
