@@ -14,7 +14,9 @@ nav:
    #- Hunt Campaigns (hunters): nybble-hub/hunts-hunters.md
    - Profile: nybble-hub/profile.md
    - Registration: nybble-hub/register.md
+   - Privacy policy: nybble-hub/privacy-policy.md
    - Release Notes: nybble-hub/release-notes.md
+   - Terms and Conditions: nybble-hub/terms-and-conditions.md
  - Bring Your Own SIEM:
    - About: connectors/overview.md
    - Elastic (configuration): connectors/elastic-configuration.md
@@ -28,9 +30,54 @@ nav:
    - Onboard a Cisco device: elastic-by-nybble/cisco-onboarding.md
 theme: readthedocs
 extra_css: [extra.css]
-copyright: Copyright &copy; 2023 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
+copyright: Copyright &copy; 2024 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
 extra:
-  version: "2023.12.01"
+  version: "2024.02.01"
+
+plugins:
+  - search 
+  - i18n:
+      docs_structure: suffix
+      fallback_to_default: true
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+          site_name: "Nybble Docs"
+        - locale: fr
+          name: Français
+          build: true
+          site_name: "Documentation Nybble"
+          copyright: Copyright &copy; 2024 Nybble Team pour l'entreprise <a href="https://nybble-security.io">Nybble</a>.
+          nav_translations:
+            Home: "Accueil"
+            Nybble Hub: "Nybble Hub"
+            About: "A Propos"
+            Authentication: "Authentification"
+            Alert Triage: "Qualification d'Alerte"
+            Dashboards: "Tableaux de bord"
+            Investigations: "Investigations"
+            Hunt Campaigns (clients): "Campagnes"
+            Hunt Campaigns (hunters): "Campagnes"
+            Profile: "Profil"
+            Registration: "Enregistrement"
+            Privacy policy: "Politique de Confidentialité"
+            Release Notes: "Notes de version"
+            Bring Your Own SIEM: "Bring Your Own SIEM"
+            Elastic (configuration): "Configurer Elastic"
+            Elastic (connector): "Connecteur Elastic"
+            Elastic by Nybble: "Elastic By Nybble"
+            Filebeat central collector: "Collecteur Filebeat"
+            Onboard a Windows: "Ajouter un Windows"
+            Onboard a Linux: "Ajouter un Linux"
+            Onboard a Fortinet device: "Ajouter un Fortinet"
+            Onboard a Cisco device: "Ajouter un Cisco"
+            Terms and Conditions: "Conditions Générales d'Utilisation"
+        
+
 markdown_extensions:
   - attr_list
   - admonition
