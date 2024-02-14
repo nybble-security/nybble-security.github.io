@@ -1,4 +1,4 @@
-<center>![Logo Nybble Hub](../img/nybble-hub.png)</center>
+<center>![Nybble Logo](../img/Nybble-Logo-Full-Text2-005F93.svg){: style="width:800px;"}</center>
 
 # Bring Your Own SIEM
 Vous disposez d'un SIEM qui centralise tous vos logs, déclenche certaines alertes, mais aucun traitement n'est effectué ?  
