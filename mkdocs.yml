@@ -33,7 +33,6 @@ extra_css: [extra.css]
 copyright: Copyright &copy; 2024 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
 extra:
   version: "2024.02.01"
-
 plugins:
   - search 
   - i18n:
@@ -60,8 +59,6 @@ plugins:
             Alert Triage: "Qualification d'Alerte"
             Dashboards: "Tableaux de bord"
             Investigations: "Investigations"
-            Hunt Campaigns (clients): "Campagnes"
-            Hunt Campaigns (hunters): "Campagnes"
             Profile: "Profil"
             Registration: "Inscription"
             Privacy policy: "Politique de Confidentialité"
@@ -76,8 +73,6 @@ plugins:
             Onboard a Fortinet device: "Onboard a Fortinet (en)"
             Onboard a Cisco device: "Onboard a Cisco (en)"
             Terms and Conditions: "Conditions Générales d'Utilisation"
-        
-
 markdown_extensions:
   - attr_list
   - admonition

@@ -1,4 +1,4 @@
-## Terms and conditions (T&C)
+# Terms and conditions (T&C)
 
 These General Terms and Conditions define the conditions which apply between Nybble, a simplified joint stock company with a share capital of 27,500 euros, whose head office is located at 1137A Avenue des Champs Blancs, 35510 Cesson Sévigné, registered in the Rennes trade and companies register, under the number 891 345 241 (the "Company") and any natural person registering on the Company's platform (the "User") accessible via the address: [https://hub.nybble-analytics.io](https://hub.nybble-analytics.io/) (the "Platform"). The Platform is designed to help organizations process their security alerts and offers two (2) different types of services: (i) Alert Processing, and (ii) Threat Bounty (together, the "Services") to which a company or organization may subscribe (the "Client").
 
