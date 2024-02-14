@@ -11,10 +11,10 @@
 
 ## Release 2023.10.01 - Glaucus atlanticus
 
-- PRIVATE BETA: registration process for analysts:
+- PRIVATE BETA: registration process for Nybblers:
     - enter all required informations (company, personal, references)
     - pass analyst or hunter tests (or both!)
-    - and become a Nybble Analyst 💪 💵
+    - and become a Nybbler 💪 💵
 - documentation global update and rebranding, following new Nybble styling guidelines
 
 ## Release 2023.09.01 - Dugong

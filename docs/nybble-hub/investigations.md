@@ -34,7 +34,7 @@ Nybble is classifying every found technic using this definition, and represent t
 - usually, tactics at left are considered as first steps of an attack scenario (network reconnaissance, tooling)
 - tactics at right are considered as the end of an attack scenario (with the final goals: impact or exfiltration). 
 
-In short, ** higher the right numbers are, higher the impact is, more successful was the attack scenario **.
+In short, **higher the right numbers are, higher the impact is, more successful was the attack scenario**.
 
 ### History
 ![Alert history](../img/nybble-hub/investigations/history.png)

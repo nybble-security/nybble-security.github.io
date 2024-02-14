@@ -1,3 +1,5 @@
+<center>![Nybble Logo](./img/Nybble-Logo-Full-Text2-005F93.svg){: style="width:800px;"}</center>
+
 # Welcome into Nybble docs
 
 This site hosts the documentation of all Nybble products.

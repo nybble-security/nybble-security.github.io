@@ -1,4 +1,4 @@
-<center>![Nybble Hub Logo](../img/nybble-hub.png)</center>
+<center>![Nybble Logo](../img/Nybble-Logo-Full-Text2-005F93.svg){: style="width:800px;"}</center>
 # Nybble Hub
 
 Nybble Hub is the central SOC management platform. In this platform all SIEM alerts and events are processed:

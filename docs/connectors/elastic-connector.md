@@ -38,7 +38,7 @@ It consists of an endpoint on Hub side, and a webhook connector on Elastic side.
     | Connector Settings / Method | - | POST |
     | Connector Settings / URL | URL of central nybble connectors endpoint | `https://connectors.nybble-analytics.io/conn/elastic` |
     | Authentication / Username,Password | connector authentication | values from `Hub side: connector` |
-    | Authentication / HTTP Header | additional infos, required | key: `Content-Type` <br> Value: `text/plain` |
+    | Authentication / HTTP Header | additional infos, required | key: `Content-Type` <br> Value: `application/json` |
 
 4. Click on save.
 
