@@ -1,4 +1,4 @@
-<center>![Logo Nybble Hub](../img/nybble-hub.png)</center>
+<center>![Nybble Logo](../img/Nybble-Logo-Full-Text2-005F93.svg){: style="width:800px;"}</center>
 
 # Nybble Hub
 
