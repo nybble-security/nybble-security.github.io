@@ -24,13 +24,38 @@ POST kbn:/api/spaces/space
   "disabledFeatures": [
     "maps",
     "enterpriseSearch",
+    "dev_tools",
+    "advancedSettings",
+    "indexPatterns",
+    "filesManagement",
+    "filesSharedImage",
+    "savedObjectsManagement",
+    "savedObjectsTagging",
+    "osquery",
+    "actions",
+    "generalCases",
+    "guidedOnboardingFeature",
+    "rulesSettings",
+    "maintenanceWindow",
+    "stackAlerts",
+    "fleetv2",
+    "fleet",
+    "monitoring",
+    "siem",
+    "securitySolutionCases",
     "logs",
     "infrastructure",
     "apm",
     "uptime",
-    "observabilityCases"
+    "observabilityCases",
+    "slo",
+    "dashboard",
+    "ml",
+    "graph",
+    "visualize",
+    "canvas"
   ],
-  "imageUrl": "data:image/png;base64,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABFFJREFUeF7tW9tx3DAMJN1BnIJyV43dRewu7GpyKSh2B6cMRUknUwCxeEieTHxfmQxFAoslsIDknI76Pb6f0jD8go57vc/QuoBFhx2UHt6K8yfI5jw8p5fvT9Ba56JjANBEf3boIBCOAUAT/VtEL+n1/uwMsPj4/gBYon8gC/YH4OFtEMPQW7BzQtwXgMc/T2nIP10A7JwL9gPAQ/0WsR1ZgANQojn+7i7p5dtFjGpE9JdckM/Yme9Tmb2e0DKKAcA7c0l5+L2A0dZu7/2fN14zoDBr/F1Pacg/piWUvoCqiAyALpIfD9U9S5MqN9HXlFQgf/QBsNzj1mAfCNsoalnV2tPA3AdAe1jdPI4FUWB2kigPgCdy7YG2vfzRB1QlDYDN4NtxFO20bIqKvqAqtwB4naeuQfk/zb5U8tI8z9VoYt8tAJosq5Wwde/+r5RVqhXWMog6BQLAkvnJw0DxIgGiZU9vPwiAskEMCyAhgvgfZE9KRDWgk2AEAIAIgZyPYgBjD1MFFPM78K7BznILvUmQEUS8DrCzII76LRg72NQRQkYWCNLTxQRrgu5cx1gp3Lv31XhsOMKVwjEfGAJjksLaaiAlPW0d7w1BNPlAsAtoh0v/fa39du2/t7235LzGYEG6LleIzwd1WDPOKe7qvzsDHBkANiuD0xcLZeczpVHYOKWSnexqI1dSQh62Z+4Sxd3fEPXb4ZE+jldUnuijV6EXhPX4jPEDb4dLNNCB6GyUJ/o3x3S6Yna6VpxbvoKVIJKwEDCQfZArVBNa/yqMTi9DUv4FrNgMWYzmEpW27Elg8Ofgb50JMG9XwOL8uCHR9kbc/RaQyHNWTKgAWJ3nANCKKCn67aB1Xu+yu16r7HK+GkInKY9xSPS9gZuuQw4YNvBZOgYEfv+AKhMBADlpWYLoTYa97tK99/CcTd0VSlEvTeXuUh6ydnVwGABCnbZGKqoj5EDI+VyrgNVAVK1ZcoE0WAm4/2VIOgOgExMUokjnhn8tIsvfoKDFACBJ1TEXrOYKYt0HPsKwsGp97mTzJIQMY6Z5M8R50WHjAg8IIQB8pvNeNThdWXsvcLTz5Qpxoy09E5YcQ78dLuj2EhaXoddNUBRAt2lybXO5fWUQLinn5xZE4ROZ6cuwNRic81xZsgLROk4ksE3m2HahpNMftoLTzzyAbGmItr4oED3HNwqUEGDzRAj5lK8QCgaAWijTbvsUS+HlxQn2SX1QFbIBoIkSjTD1/Y9HjIlUZ9WwiQF+GRoNQHFDVo+EszYGfAGg+PMXjmJt7xCk7bWM/iwGbIcoXgDQKtMgZAPAkv3b0EQz4J8DYC2oUC3R4/exADi6x6V+r94nhABg+yzPeAW+AMD/CpRVICsZ+58xgFZt3sQqjeSYQNiugHUYgSQqLRDInp3k6QNAA4Q05V0biYDgdHzJxVrl1F1PG27S6OM51H5Bju8DQMsITdQ5ZGcQgh2fj/sLWPgS2KwcngcAAAAASUVORK5CYII="
+  "imageUrl": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAABFFJREFUeF7tW9tx3DAMJN1BnIJyV43dRewu7GpyKSh2B6cMRUknUwCxeEieTHxfmQxFAoslsIDknI76Pb6f0jD8go57vc/QuoBFhx2UHt6K8yfI5jw8p5fvT9Ba56JjANBEf3boIBCOAUAT/VtEL+n1/uwMsPj4/gBYon8gC/YH4OFtEMPQW7BzQtwXgMc/T2nIP10A7JwL9gPAQ/0WsR1ZgANQojn+7i7p5dtFjGpE9JdckM/Yme9Tmb2e0DKKAcA7c0l5+L2A0dZu7/2fN14zoDBr/F1Pacg/piWUvoCqiAyALpIfD9U9S5MqN9HXlFQgf/QBsNzj1mAfCNsoalnV2tPA3AdAe1jdPI4FUWB2kigPgCdy7YG2vfzRB1QlDYDN4NtxFO20bIqKvqAqtwB4naeuQfk/zb5U8tI8z9VoYt8tAJosq5Wwde/+r5RVqhXWMog6BQLAkvnJw0DxIgGiZU9vPwiAskEMCyAhgvgfZE9KRDWgk2AEAIAIgZyPYgBjD1MFFPM78K7BznILvUmQEUS8DrCzII76LRg72NQRQkYWCNLTxQRrgu5cx1gp3Lv31XhsOMKVwjEfGAJjksLaaiAlPW0d7w1BNPlAsAtoh0v/fa39du2/t7235LzGYEG6LleIzwd1WDPOKe7qvzsDHBkANiuD0xcLZeczpVHYOKWSnexqI1dSQh62Z+4Sxd3fEPXb4ZE+jldUnuijV6EXhPX4jPEDb4dLNNCB6GyUJ/o3x3S6Yna6VpxbvoKVIJKwEDCQfZArVBNa/yqMTi9DUv4FrNgMWYzmEpW27Elg8Ofgb50JMG9XwOL8uCHR9kbc/RaQyHNWTKgAWJ3nANCKKCn67aB1Xu+yu16r7HK+GkInKY9xSPS9gZuuQw4YNvBZOgYEfv+AKhMBADlpWYLoTYa97tK99/CcTd0VSlEvTeXuUh6ydnVwGABCnbZGKqoj5EDI+VyrgNVAVK1ZcoE0WAm4/2VIOgOgExMUokjnhn8tIsvfoKDFACBJ1TEXrOYKYt0HPsKwsGp97mTzJIQMY6Z5M8R50WHjAg8IIQB8pvNeNThdWXsvcLTz5Qpxoy09E5YcQ78dLuj2EhaXoddNUBRAt2lybXO5fWUQLinn5xZE4ROZ6cuwNRic81xZsgLROk4ksE3m2HahpNMftoLTzzyAbGmItr4oED3HNwqUEGDzRAj5lK8QCgaAWijTbvsUS+HlxQn2SX1QFbIBoIkSjTD1/Y9HjIlUZ9WwiQF+GRoNQHFDVo+EszYGfAGg+PMXjmJt7xCk7bWM/iwGbIcoXgDQKtMgZAPAkv3b0EQz4J8DYC2oUC3R4/exADi6x6V+r94nhABg+yzPeAW+AMD/CpRVICsZ+58xgFZt3sQqjeSYQNiugHUYgSQqLRDInp3k6QNAA4Q05V0biYDgdHzJxVrl1F1PG27S6OM51H5Bju8DQMsITdQ5ZGcQgh2fj/sLWPgS2KwcngcAAAAASUVORK5CYII="
 }
 ```
 
@@ -47,7 +72,7 @@ Importez ce fichier yaml dans votre organisation Elastic, paramètres Kibana :
 
 ```yaml
 xpack.security.authc.providers:
-  saml.saml1:
+  saml.nybble:
     order: 0
     realm: nybble
     description: "Log in with Nybble Auth"
@@ -152,3 +177,7 @@ POST _security/role_mapping/nybble_analyst_hunter_role_mapping
     "metadata": {}
   }
 ```
+
+### Dataview
+Pour que les analystes puissent voir les données présentes dans les index autorisés via le rôle, il faut créer une dataview.  
+Les droits et le space ci-dessus sont trop restrictifs pour le faire, donc il faut créer cette dataview dans un autre space puis la transférer dans le space Nybble.
