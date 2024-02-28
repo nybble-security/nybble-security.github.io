@@ -1,5 +1,11 @@
 # Nybble Hub: Release Notes
 
+## Release 2024.01.01
+- Global speed and user experience improvments : less fetchs, cache management
+- Notifications (bottom left) to display status of any actions
+- Fixing bad 12 months stat on dashboard
+
+
 ## Release 2023.12.01 - Pacu
 - Hub homepage rebranding, following new Nybble styling guidelines
 - Display registration infos in your profile
