@@ -1,5 +1,10 @@
 # Nybble Hub : Notes de version
 
+## Release 2024.01.01
+- Amélioration globale des performances et de l'expérience utilisateur : moins de rafraichissements, gestion du cache
+- Confirmation des actions via une notification discrète en bas à gauche de l'écran
+- Correction d'un problème sur la statistique annuelle
+
 ## Release 2023.12.01 - Pacu
 - Rebranding de la page d'accueil du Hub, suivant les nouvelles directives de style Nybble
 - Afficher les informations d'inscription dans votre profil
