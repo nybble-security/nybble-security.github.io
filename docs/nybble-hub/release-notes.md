@@ -1,5 +1,10 @@
 # Nybble Hub: Release Notes
 
+## Release 2024.02.01
+- BETA : Scoring calculation for analyst.
+- Mail notifications for users, settings available in profile
+- Fixing RAW Event display bug on alerts.
+
 ## Release 2024.01.01
 - Global speed and user experience improvments : less fetchs, cache management
 - Notifications (bottom left) to display status of any actions
