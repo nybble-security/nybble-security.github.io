@@ -1,5 +1,10 @@
 # Nybble Hub : Notes de version
 
+## Release 2024.02.01
+- BETA : Algorithme de scoring pour analystes
+- Ajout de notifications par mail configurables via le profil utilisateur
+- Correction d'un bug sur l'affichage du RAW Event dans une alerte
+
 ## Release 2024.01.01
 - Amélioration globale des performances et de l'expérience utilisateur : moins de rafraichissements, gestion du cache
 - Confirmation des actions via une notification discrète en bas à gauche de l'écran
@@ -24,7 +29,7 @@
 
 ## Release 2023.09.01 - Dugong
 
-- 1ère version de renvoi des résultats d'alerte aux MSSP (supporté par TheHive)
+- 1ère version du renvoi des résultats d'alerte aux MSSP (via TheHive)
 - Alertes : améliorations suite aux retours du Hacktoberfest CTF
 - Campagnes de Threat Hunting : améliorations suite aux retours du Hacktoberfest CTF
 - La langue est désormais déterminée par le navigateur par défaut

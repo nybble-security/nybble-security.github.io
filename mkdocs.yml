@@ -32,7 +32,7 @@ theme: readthedocs
 extra_css: [extra.css]
 copyright: Copyright &copy; 2024 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
 extra:
-  version: "2024.01.01"
+  version: "2024.02.01"
 plugins:
   - search 
   - i18n:
