@@ -3,7 +3,7 @@
      Cette documentation convient uniquement aux clients Bring Your Own SIEM (BYOS).  
      Si vous êtes un client Elastic By Nybble, toutes les configurations sont déjà effectuées.
 
-## Aperçu
+## En bref
 En suivant cette page, vous configurerez la connexion entre votre SIEM et Nybble Hub.
 Il se compose d'un point de terminaison côté Hub et d'un connecteur webhook côté Elastic.
 

@@ -1,7 +1,7 @@
 <center>![Sekoia Logo](../img/connectors/sekoia.png){: style="width:800px;"}</center>
 # Configurer un connecteur Sekoia
 
-## Overview
+## En bref
 Suivez cette page pour envoyer vos alertes Sekoia.IO vers Nybble Hub.  
 Nous allons configurer un connecteur dans le Hub, un Playbook Sekoia et le SSO pour les analystes.
 
