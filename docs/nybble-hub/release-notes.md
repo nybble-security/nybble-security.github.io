@@ -1,5 +1,11 @@
 # Nybble Hub: Release Notes
 
+## Release 2024.04.01
+- Sekoia integration is now available for all clients !
+- Alerts are now sorted by remaining SLA
+- Mail notifications in registration platform
+- UX improvments on tables. 
+
 ## Release 2024.02.01
 - BETA : Scoring calculation for analyst.
 - Mail notifications for users, settings available in profile

@@ -3,7 +3,7 @@
      Cette documentation convient uniquement aux clients Bring Your Own SIEM (BYOS).
      Si vous êtes un client Elastic By Nybble, toutes les configurations sont déjà effectuées.
 
-## Aperçu
+## En bref
 Les analystes et chasseurs Nybble nécessitent un accès à votre SIEM afin de mener à bien leurs enquêtes.
 Cet accès est limité :
 
