@@ -5,11 +5,15 @@
 Suivez cette page pour envoyer vos alertes Sekoia.IO vers Nybble Hub.  
 Nous allons configurer un connecteur dans le Hub, un Playbook Sekoia et le SSO pour les analystes.
 
+!!! note
+    Depuis la version 2024.06.01, l'utilisation du SSO peut être désactivé. Cependant, cela réduit les capacités d'analyse et de décision de notre communauté d'analyste.  
+    Si vous souhaitez vous passer du SSO, omettez les chapitres 1 et 3 de cette documentation.
+
 ## 1. Sekoia: Configuration SSO (partie 1/2)
 !!! note
     Documentation officielle Sekoia : https://docs.sekoia.io/getting_started/sso/openid_connect/
 
-Nos analysts font appel au SSO Nybble pour se connecter à votre communauté Sekoia.  
+Nos analystes font appel au SSO Nybble pour se connecter à votre communauté Sekoia.  
 Les noms d'utilisateurs finissent par `@nybble.bzh`. C'est le domaine qu'il faut valider.
 
 Après validation, copier la `Single Sign-on URL` (de forme `https://app.sekoia.io/user/oidc/<some_uuid>`), nous allons l'utiliser dans la création du connecteur côté Nybble. 

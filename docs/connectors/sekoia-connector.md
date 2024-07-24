@@ -5,6 +5,10 @@
 Follow this page to send alerts from Sekoia.IO to Nybble Hub.  
 It requires a Hub connector, Sekoia playbook and SSO for our analysts (with restricted role).  
 
+!!! note
+    Starting at release 2024.06.01, the SSO can be optional. However, it drastically restrict analysis and decision capabilities of our Nybblers.  
+    To disable SSO, skip chapters 1 and 3 of this documentation.
+
 ## 1. Sekoia: Start SSO configuration
 !!! note
     Sekoia SSO documentation : https://docs.sekoia.io/getting_started/sso/openid_connect/

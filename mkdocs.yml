@@ -19,8 +19,7 @@ nav:
    - Terms and Conditions: nybble-hub/terms-and-conditions.md
  - SIEM/EDR Connectors:
    - About: connectors/overview.md
-   - Elastic (configuration): connectors/elastic-configuration.md
-   - Elastic (connector): connectors/elastic-connector.md
+   - Elastic Connector: connectors/elastic-connector.md
    - Sekoia Connector: connectors/sekoia-connector.md
 #  - Elastic by Nybble:
 #    - About: elastic-by-nybble/overview.md
@@ -33,7 +32,7 @@ theme: readthedocs
 extra_css: [extra.css]
 copyright: Copyright &copy; 2024 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
 extra:
-  version: "2024.04.01"
+  version: "2024.06.01"
 plugins:
   - search 
   - i18n:
@@ -65,8 +64,7 @@ plugins:
             Registration: "Inscription"
             Privacy policy: "Politique de Confidentialité"
             Release Notes: "Notes de version"
-            Elastic (configuration): "Configurer Elastic"
-            Elastic (connector): "Connecteur Elastic"
+            Elastic Connector: "Connecteur Elastic"
             Elastic by Nybble: "Elastic By Nybble"
             Sekoia Connector: "Connecteur Sekoia"
             Filebeat central collector: "Filebeat collector (en)"
