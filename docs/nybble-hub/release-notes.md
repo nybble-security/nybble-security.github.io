@@ -1,5 +1,9 @@
 # Nybble Hub: Release Notes
 
+## Release 2024.06.01
+- Onboarding process has been simplified: less mails and steps, one single account.
+- Connectors: SSO can be disabled at creation.
+
 ## Release 2024.04.01
 - Sekoia integration is now available for all clients !
 - Alerts are now sorted by remaining SLA
