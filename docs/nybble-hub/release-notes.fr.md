@@ -1,5 +1,9 @@
 # Nybble Hub : Notes de version
 
+## Release 2024.06.01
+- Simplification de l'inscription au Nybble Hub : moins de mails, moins d'étapes, 1 seul compte.
+- Connecteurs Sekoia et Elastic : le SSO est désormais désactivable
+
 ## Release 2024.04.01
 - L'intégration avec Sekoia.IO est désormais disponible globalement !
 - Alertes triées par SLA au lieu de la sévérité
