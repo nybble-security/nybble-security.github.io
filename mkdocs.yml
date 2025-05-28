@@ -30,9 +30,9 @@ nav:
 #    - Onboard a Cisco device: elastic-by-nybble/cisco-onboarding.md
 theme: readthedocs
 extra_css: [extra.css]
-copyright: Copyright &copy; 2024 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
+copyright: Copyright &copy; 2025 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.
 extra:
-  version: "2024.06.01"
+  version: "2025.03.01"
 plugins:
   - search 
   - i18n:
@@ -50,7 +50,7 @@ plugins:
           name: Français
           build: true
           site_name: "Documentation Nybble"
-          copyright: Copyright &copy; 2024 Nybble Team pour l'entreprise <a href="https://nybble-security.io">Nybble</a>.
+          copyright: Copyright &copy; 2025 Nybble Team pour l'entreprise <a href="https://nybble-security.io">Nybble</a>.
           nav_translations:
             Home: "Accueil"
             Nybble Hub: "Nybble Hub"

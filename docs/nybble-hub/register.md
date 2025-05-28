@@ -34,7 +34,8 @@ Some rules and tips:
 
 ## Let's go! How it works?
 
-1. Go to [https://register.nybble-security.io/](https://register.nybble-security.io/) and select "Start your registration"
-2. Fill the form, that will create you an account for both register and dojo platforms.
-3. Register platform will guide you through all the steps, starting by the administrative side
+1. Go to [https://hub.nybble-security.io/](https://hub.nybble-security.io/) and select "Become a Nybbler"
+2. Fill the form, that will create you an account for both hub and dojo platforms.
+3. Your hub profile is limited to registration form, starting by the administrative side
 4. After completing the administrative side and, at least, one test, you will have access to the last step : summary of your registration. From this screen, you can double check everything, submit your registration and Nybble will do the final checks.
+5. If everything is OK, your Hub account is upgraded and you can access all the menus!

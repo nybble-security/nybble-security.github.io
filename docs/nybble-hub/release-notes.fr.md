@@ -1,5 +1,17 @@
 # Nybble Hub : Notes de version
 
+## Release 2025.03.01
+- Amélioration de l'affichage du RawEvent dans la page alertes
+- Fix sur l'inscription empêchant de sauvegarder les informations si on met un lien LinkedIn pour le CV
+
+## Release 2025.02.01
+- Amélioration de la décision de l'analyste : désormais formalisée en 2 champs "impact" et "contexte"
+- Fix d'un bug empêchant la soumission de rapports pour certains hunters.
+
+## Release 2025.01.01
+- Corrections de bugs sur le formulaire d'inscription suite à la simplification
+- Nouvelle page de login
+
 ## Release 2024.06.01
 - Simplification de l'inscription au Nybble Hub : moins de mails, moins d'étapes, 1 seul compte.
 - Connecteurs Sekoia et Elastic : le SSO est désormais désactivable
