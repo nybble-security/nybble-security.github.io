@@ -1,4 +1,4 @@
-<center>![Sekoia Logo](../img/connectors/sekoia.png){: style="width:800px;"}</center>
+![Sekoia Logo](../img/connectors/sekoia.png){: style="width:800px; margin:0 auto; display:block"}
 # Configurer un connecteur Sekoia
 
 ## En bref

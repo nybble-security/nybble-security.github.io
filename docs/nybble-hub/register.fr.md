@@ -1,5 +1,5 @@
 # Processus d'inscription Nybble
-<center>![Processus d'inscription](../img/registration-process.png){style="width:70%;"}</center>
+![Processus d'inscription](../img/registration-process.png){style="width:70%; margin:0 auto; display:block"}
 Rassembler la meilleure communauté Blue Team nécessite un bon processus d’inscription.  
 Notre processus comprend plusieurs étapes, conçues pour garantir la clarté pour toutes les personnes impliquées, la qualité des membres de la communauté et le respect des lois internationales.
 
