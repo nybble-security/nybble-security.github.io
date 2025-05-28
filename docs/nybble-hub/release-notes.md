@@ -1,5 +1,17 @@
 # Nybble Hub: Release Notes
 
+## Release 2025.03.01
+- Better RawEvent display using dedicated scrolling on alert page
+- Fix bug on registration which prevent saving infos if you provide only a LinkedIn CV.
+
+## Release 2025.02.01
+- Improvment on analyst decision: splitted mandatory fields for "impact" and "decision"
+- Fix bug on hunting reports which prevents some users to submit new reports
+
+## Release 2025.01.01
+- Fix minor bugs on the new onboarding process.
+- New login page, simplified.
+
 ## Release 2024.06.01
 - Onboarding process has been simplified: less mails and steps, one single account.
 - Connectors: SSO can be disabled at creation.

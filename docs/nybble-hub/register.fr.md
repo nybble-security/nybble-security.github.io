@@ -34,7 +34,8 @@ Quelques règles et conseils :
 
 ## Allons-y! Comment ça fonctionne?
 
-1. Accédez à [https://register.nybble-security.io/](https://register.nybble-security.io/) et sélectionnez « Démarrez votre inscription »
-2. Remplissez le formulaire qui vous créera un compte pour les plateformes d'inscription et de dojo.
-3. La plateforme d'inscription vous guidera à travers toutes les étapes, en commençant par le côté administratif
+1. Accédez à [https://hub.nybble-security.io/](https://hub.nybble-security.io/) et sélectionnez « Devenez un Nybbler »
+2. Remplissez le formulaire qui vous créera un compte pour le hub et le dojo.
+3. Vous n'avez accès qu'au menu pour l'inscription, en commençant par le côté administratif
 4. Après avoir effectué la partie administrative et au moins un test, vous aurez accès à la dernière étape : le récapitulatif de votre inscription. À partir de cet écran, vous pouvez tout vérifier, soumettre votre inscription et Nybble effectuera les vérifications finales.
+5. Si c'est validé, vous avez accès aux autres menus du Hub !
