@@ -1,5 +1,6 @@
 # Nybble Registration Process
-<center>![Registration Process](../img/registration-process.png){style="width:70%;"}</center>
+![Registration Process](../img/registration-process.png){style="width:70%; margin:0 auto; display:block"}
+
 Bringing the best blue team community requires a good registration process.  
 Our process consists of several steps, designed to ensure clarity for everyone involved, quality of community members and respect of international laws.
 

@@ -1,4 +1,4 @@
-<center>![Nybble Logo](../img/Nybble-Logo-Full-Text2-005F93.svg){: style="width:800px;"}</center>
+![Nybble Logo](../img/Nybble-Logo-Full-Text2-005F93.svg){: style="width:800px; margin:0 auto; display:block"}
 
 # Bring Your Own SIEM -> Connecteurs
 Vous disposez d'un SIEM (ou d'un EDR) qui centralise tous vos logs, déclenche certaines alertes, mais aucun traitement n'est effectué ?  

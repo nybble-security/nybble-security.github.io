@@ -1,4 +1,4 @@
-<center>![Nybble Logo](./img/Nybble-Logo-Full-Text2-005F93.svg){: style="width:800px;"}</center>
+![Nybble Logo](./img/Nybble-Logo-Full-Text2-005F93.svg){: style="width:800px; margin:0 auto; display:block"}
 
 # Bienvenue sur la Documentation Nybble
 
