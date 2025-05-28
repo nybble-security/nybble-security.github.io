@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Nybble Engineering Team" /><link rel="canonical" href="https://docs.nybble-security.io/fr/nybble-hub/alert-triage/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Qualification d'Alerte - Documentation Nybble</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Qualification d\u0027Alerte";
+        var mkdocs_page_input_path = "nybble-hub/alert-triage.fr.md";
+        var mkdocs_page_url = "/fr/nybble-hub/alert-triage/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../" class="icon icon-home"> Documentation Nybble
+        </a>
+        <div class="version">
+          2025.03.01
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../">Accueil</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Nybble Hub</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">A Propos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../authentication/">Authentification</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Qualification d'Alerte</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#tableau-des-alertes">Tableau des alertes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#details-et-traitement-de-lalerte">Détails et traitement de l'alerte</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-resume">(1) Résumé</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-sigma">(2) Sigma</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-evenements-bruts">(3) Événement(s) brut(s)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-actions">(4) Actions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#5-decision">(5) Décision</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dashboards/">Tableaux de bord</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../investigations/">Investigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../profile/">Profil</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../register/">Inscription</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../privacy-policy/">Politique de Confidentialité</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-notes/">Notes de version</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions/">Conditions Générales d'Utilisation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Connecteurs SIEM/EDR</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/overview/">A Propos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/elastic-connector/">Connecteur Elastic</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/sekoia-connector/">Connecteur Sekoia</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation Nybble</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Nybble Hub</li>
+      <li class="breadcrumb-item active">Qualification d'Alerte</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="qualification-des-alertes">Qualification des alertes</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Un profil d'analyste L1 ou d'analyste L2 est requis pour suivre cette documentation</p>
+</div>
+<h2 id="tableau-des-alertes">Tableau des alertes</h2>
+<p><img alt="Tableau des alertes" src="../../../img/nybble-hub/alert-triage/alert-triage-main-table.png" style="width:800px;" /></p>
+<p>Les alertes sont affichées par sévérité, puis par date de création, la plus ancienne en premier.
+Pour traiter une alerte, cliquez sur son nom. L'alerte vous sera automatiquement affectée.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Une alerte est automatiquement débloquée après 1h d'inactivité.</p>
+</div>
+<h2 id="details-et-traitement-de-lalerte">Détails et traitement de l'alerte</h2>
+<p><img alt="Traitement des alertes" src="../../../img/nybble-hub/alert-triage/alert-triage-processing.png" style="width:800px;" /></p>
+<h3 id="1-resume">(1) Résumé</h3>
+<p>Les informations utiles sont :</p>
+<ul>
+<li>Temps de traitement : horodatage SIEM lorsque l'alerte a été déclenchée</li>
+<li>occurrences : combien de fois une même alerte (champs, règle SIGMA) a été déclenchée sur une période d'1h</li>
+</ul>
+<h3 id="2-sigma">(2) Sigma</h3>
+<p>Toutes les informations utiles extraites du ou des événements, adaptées à la règle SIGMA :</p>
+<ul>
+<li>tags : donnés par SIGMA</li>
+<li>champs : valeurs des principaux champs extraits. Ces champs sont la racine du tri</li>
+<li>références : données par SIGMA, articles externes utiles pour obtenir plus d'informations sur l'alerte</li>
+</ul>
+<h3 id="3-evenements-bruts">(3) Événement(s) brut(s)</h3>
+<p>Sur ce panneau, vous voyez une représentation arborescente de l'événement d'origine tel qu'il se présente sur le SIEM avant la correspondance.
+Utile pour récupérer plus d'informations que celles affichées à l'aide des champs.</p>
+<h3 id="4-actions">(4) Actions</h3>
+<p>Plusieurs actions sont disponibles :</p>
+<ul>
+<li>Afficher les journaux : ouvre le SIEM correspondant et affiche l'événement dans le panneau de découverte.
+   Vous pouvez faire plus de requêtes pour trouver des informations complémentaires ou du contexte afin de prendre votre décision sur le tri des alertes</li>
+<li>Wiki : page Wiki spécifique et dédiée (selon la règle SIGMA) pour vous aider dans le tri des alertes. Elle s'ouvre sur un panneau latéral pour plus de commodité.</li>
+<li>Libérer/Déverrouiller l'alerte : pas prêt à prendre sa décision ? Relâchez l'alerte pour permettre à un autre analyste de l'examiner.</li>
+</ul>
+<h3 id="5-decision">(5) Décision</h3>
+<p>Décision finale concernant l'alerte en cours :</p>
+<ul>
+<li>aucun incident : Nybble ajustera la règle pour éviter de nouvelles alertes</li>
+<li>incident : l'équipe Nybble L2 va enquêter</li>
+<li>escalader : vous n'êtes pas en mesure de prendre la décision, ou cela nécessite plus d'investigation, donc vous remontez vers l'équipe L2.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../authentication/" class="btn btn-neutral float-left" title="Authentification"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../dashboards/" class="btn btn-neutral float-right" title="Tableaux de bord">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 Nybble Team pour l'entreprise <a href="https://nybble-security.io">Nybble</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../authentication/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../dashboards/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Nybble Engineering Team" /><link rel="canonical" href="https://docs.nybble-security.io/nybble-hub/authentication/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Authentication - Nybble Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Authentication";
+        var mkdocs_page_input_path = "nybble-hub/authentication.md";
+        var mkdocs_page_url = "/nybble-hub/authentication/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Nybble Docs
+        </a>
+        <div class="version">
+          2025.03.01
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Nybble Hub</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">About</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Authentication</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#onboarding-process">Onboarding process</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#multi-factor-authentication-mfa">Multi Factor Authentication (MFA)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-reset-your-password">How to reset your password?</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../alert-triage/">Alert Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dashboards/">Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../investigations/">Investigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../profile/">Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../register/">Registration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../privacy-policy/">Privacy policy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions/">Terms and Conditions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SIEM/EDR Connectors</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/elastic-connector/">Elastic Connector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/sekoia-connector/">Sekoia Connector</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Nybble Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Nybble Hub</li>
+      <li class="breadcrumb-item active">Authentication</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="authentication">Authentication</h1>
+<p>Access to Nybble services is secured by Single Sign On, based on Auth0 services.</p>
+<h2 id="onboarding-process">Onboarding process</h2>
+<p>3 easy steps to get your account up and ready:</p>
+<ol>
+<li>Account creation by Nybble</li>
+<li>Set your password</li>
+<li>Enroll a 2nd factor for stronger authentication (Multi Factor Authentication)</li>
+</ol>
+<p>After step 1, you will receive 2 mails:</p>
+<ul>
+<li>welcome mail which summarizes the onboarding process</li>
+<li>password reset mail, which gives you a link to set your password</li>
+</ul>
+<h2 id="multi-factor-authentication-mfa">Multi Factor Authentication (MFA)</h2>
+<p>To complement password authentication, Nybble has activated Multi Factor Authentification (MFA) using a smartphone as 2nd factor.<br />
+You will need an Authenticator app such as:</p>
+<ul>
+<li>Google Authenticator (<a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2">Google Play</a> / <a href="https://itunes.apple.com/us/app/google-authenticator/id388497605">App Store</a>).</li>
+<li>Microsoft Authenticator (<a href="https://play.google.com/store/apps/details?id=com.azure.authenticator">Google Play</a> / <a href="https://itunes.apple.com/us/app/microsoft-authenticator/id983156458">App Store</a>)</li>
+</ul>
+<p>Enrollment will be done at 1st login: a QR code will be prompted, you can scan it with one of the listed app.</p>
+<p>Finally, after a successful login with your password, you will be prompted for a one-time code, coming from your smartphone.  </p>
+<h2 id="how-to-reset-your-password">How to reset your password?</h2>
+<p>If you've lost / forgotten your password, you can reset it from login page:</p>
+<ol>
+<li>Connect to <a href="https://hub.nybble-analytics.io">Nybble Hub</a> then try to login as usual</li>
+<li>On the login page, select "forgot password"<br>
+  <img alt="Forgot Password" src="../../img/nybble-hub/auth0-forgot.png" style="width:400px;" /></li>
+<li>Provide your mail and the platform will send you a link and full instructions to reset your password.</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../overview/" class="btn btn-neutral float-left" title="About"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../alert-triage/" class="btn btn-neutral float-right" title="Alert Triage">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../alert-triage/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

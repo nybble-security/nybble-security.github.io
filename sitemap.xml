@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://docs.nybble-security.io/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/connectors/elastic-connector/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/connectors/elastic-connector/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/connectors/elastic-connector/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/connectors/overview/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/connectors/overview/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/connectors/overview/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/connectors/sekoia-connector/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/connectors/sekoia-connector/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/connectors/sekoia-connector/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/elastic-by-nybble/cisco-onboarding/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/cisco-onboarding/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/cisco-onboarding/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/elastic-by-nybble/filebeat-collector/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/filebeat-collector/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/filebeat-collector/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/elastic-by-nybble/fortinet-onboarding/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/fortinet-onboarding/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/fortinet-onboarding/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/elastic-by-nybble/linux-onboarding/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/linux-onboarding/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/linux-onboarding/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/elastic-by-nybble/overview/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/overview/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/overview/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/elastic-by-nybble/windows-onboarding/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/windows-onboarding/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/windows-onboarding/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/alert-triage/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/alert-triage/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/alert-triage/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/authentication/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/authentication/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/authentication/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/dashboards/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/dashboards/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/dashboards/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/hunts-clients/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/hunts-clients/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/hunts-clients/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/hunts-hunters/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/hunts-hunters/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/hunts-hunters/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/investigations/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/investigations/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/investigations/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/overview/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/overview/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/overview/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/privacy-policy/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/privacy-policy/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/privacy-policy/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/profile/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/profile/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/profile/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/register/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/register/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/register/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/release-notes/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/release-notes/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/release-notes/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/nybble-hub/terms-and-conditions/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/terms-and-conditions/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/terms-and-conditions/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/connectors/elastic-connector/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/connectors/elastic-connector/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/connectors/elastic-connector/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/connectors/overview/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/connectors/overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/connectors/overview/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/connectors/sekoia-connector/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/connectors/sekoia-connector/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/connectors/sekoia-connector/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/elastic-by-nybble/cisco-onboarding/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/cisco-onboarding/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/cisco-onboarding/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/elastic-by-nybble/filebeat-collector/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/filebeat-collector/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/filebeat-collector/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/elastic-by-nybble/fortinet-onboarding/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/fortinet-onboarding/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/fortinet-onboarding/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/elastic-by-nybble/linux-onboarding/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/linux-onboarding/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/linux-onboarding/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/elastic-by-nybble/overview/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/overview/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/elastic-by-nybble/windows-onboarding/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/elastic-by-nybble/windows-onboarding/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/elastic-by-nybble/windows-onboarding/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/alert-triage/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/alert-triage/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/alert-triage/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/authentication/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/authentication/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/authentication/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/dashboards/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/dashboards/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/dashboards/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/hunts-clients/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/hunts-clients/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/hunts-clients/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/hunts-hunters/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/hunts-hunters/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/hunts-hunters/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/investigations/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/investigations/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/investigations/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/overview/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/overview/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/privacy-policy/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/privacy-policy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/privacy-policy/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/profile/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/profile/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/profile/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/register/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/register/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/register/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/release-notes/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/release-notes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/release-notes/"/>
+    </url>
+    <url>
+        <loc>https://docs.nybble-security.io/fr/nybble-hub/terms-and-conditions/</loc>
+        <lastmod>2025-05-28</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://docs.nybble-security.io/fr/nybble-hub/terms-and-conditions/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://docs.nybble-security.io/nybble-hub/terms-and-conditions/"/>
+    </url>
+</urlset>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Nybble Engineering Team" /><link rel="canonical" href="https://docs.nybble-security.io/elastic-by-nybble/windows-onboarding/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Nybble Security Analytics: Onboard a Windows - Nybble Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Nybble Security Analytics: Onboard a Windows";
+        var mkdocs_page_input_path = "elastic-by-nybble/windows-onboarding.md";
+        var mkdocs_page_url = "/elastic-by-nybble/windows-onboarding/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Nybble Docs
+        </a>
+        <div class="version">
+          2025.03.01
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Nybble Hub</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/authentication/">Authentication</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/alert-triage/">Alert Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/dashboards/">Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/investigations/">Investigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/profile/">Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/register/">Registration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/privacy-policy/">Privacy policy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/release-notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/terms-and-conditions/">Terms and Conditions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SIEM/EDR Connectors</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/elastic-connector/">Elastic Connector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/sekoia-connector/">Sekoia Connector</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Nybble Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Nybble Security Analytics: Onboard a Windows</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nybble-security-analytics-onboard-a-windows">Nybble Security Analytics: Onboard a Windows</h1>
+<p>Winlogbeat is the agent to install on a Windows to onboard it.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Connect to <a href="https://hub.nybble-analytics.io/settings/agents" target="_blank">Nybble Hub</a> at the Settings section to:</p>
+<ul>
+<li>download the Winlogbeat package: it contains software + configuration files</li>
+<li>grab your client short name: it will be used in network rules.</li>
+</ul>
+<h2 id="winlogbeat-installation">Winlogbeat installation</h2>
+<p>Winlogbeat itself has no sizing requirements: it's a lightweight agent (less than 2% CPU).</p>
+<ol>
+<li>Extract the contents of winlogbeat-package into C:\Program Files.</li>
+<li>Rename the winlogbeat-<version> directory to Winlogbeat.</li>
+<li>Open a PowerShell prompt as an Administrator (right-click on the PowerShell icon and select Run As Administrator).</li>
+<li>From the PowerShell prompt, run the following commands to install the service.
+<pre class="highlight"><code>PS C:\Users\Administrator&gt; cd 'C:\Program Files\Winlogbeat'
+PS C:\Program Files\Winlogbeat&gt; .\nybble-install-service-winlogbeat.ps1
+
+Security warning
+Run only scripts that you trust. While scripts from the internet can be useful,
+this script can potentially harm your computer. If you trust this script, use
+the Unblock-File cmdlet to allow the script to run without this warning message.
+Do you want to run C:\Program Files\Winlogbeat\nybble-install-service-winlogbeat.ps1?
+[D] Do not run  [R] Run once  [S] Suspend  [?] Help (default is "D"): R
+
+Status   Name               DisplayName
+------   ----               -----------
+Stopped  winlogbeat         winlogbeat</code></pre></li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If script execution is disabled on your system, you need to set the execution policy for the current session to allow the script to run.<br />
+Example: <code>powershell.exe -ExecutionPolicy unrestricted -file .\nybble-install-service-winlogbeat.ps1</code></p>
+</div>
+<h2 id="network-rules">Network rules</h2>
+<p>Winlogbeat agent requires following network rule to communicate with Nybble's servers:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Destination</th>
+<th>Protocol</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>winlogbeat server</td>
+<td><code>&lt;clientshortname&gt;-kafka-bootstrap.nybble-analytics.io</code> <br> <code>&lt;clientshortname&gt;-kafka-broker-[0-9].nybble-analytics.io</code></td>
+<td>TCP 9094</td>
+<td>Event sending</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

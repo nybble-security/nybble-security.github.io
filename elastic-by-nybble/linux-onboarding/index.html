@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Nybble Engineering Team" /><link rel="canonical" href="https://docs.nybble-security.io/elastic-by-nybble/linux-onboarding/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Nybble Security Analytics: Onboard a Linux - Nybble Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Nybble Security Analytics: Onboard a Linux";
+        var mkdocs_page_input_path = "elastic-by-nybble/linux-onboarding.md";
+        var mkdocs_page_url = "/elastic-by-nybble/linux-onboarding/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Nybble Docs
+        </a>
+        <div class="version">
+          2025.03.01
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Nybble Hub</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/authentication/">Authentication</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/alert-triage/">Alert Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/dashboards/">Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/investigations/">Investigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/profile/">Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/register/">Registration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/privacy-policy/">Privacy policy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/release-notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/terms-and-conditions/">Terms and Conditions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SIEM/EDR Connectors</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/elastic-connector/">Elastic Connector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/sekoia-connector/">Sekoia Connector</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Nybble Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Nybble Security Analytics: Onboard a Linux</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nybble-security-analytics-onboard-a-linux">Nybble Security Analytics: Onboard a Linux</h1>
+<p>Auditbeat is the agent to install on a Linux to onboard it.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Connect to <a href="https://hub.nybble-analytics.io/settings/agents" target="_blank">Nybble Hub</a> at the Settings section to:</p>
+<ul>
+<li>download the auditbeat configuration files</li>
+<li>grab your client short name: it will be used in network rules.</li>
+</ul>
+<h2 id="auditbeat-installation">Auditbeat installation</h2>
+<p>Auditbeat itself has no sizing requirements: it's a lightweight agent (less than 2% CPU).</p>
+<p>To download and install Auditbeat, use the commands that work with your system:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Debian</label><div class="tabbed-content">
+<pre class="highlight"><code>curl -L -O https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.3.3-amd64.deb
+sudo dpkg -i auditbeat-8.3.3-amd64.deb</code></pre>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">CentOS</label><div class="tabbed-content">
+<pre class="highlight"><code>curl -L -O https://artifacts.elastic.co/downloads/beats/auditbeat/auditbeat-8.3.3-x86_64.rpm
+sudo rpm -vi auditbeat-8.3.3-x86_64.rpm</code></pre>
+</div>
+</div>
+<h2 id="auditbeat-configuration">Auditbeat configuration</h2>
+<p>The auditbeat-config.zip file contains all the required files to run auditbeat:  </p>
+<ul>
+<li>yml configuration files</li>
+<li>certs subfolder : certificates to secure communication to Nybble's servers</li>
+</ul>
+<p>Copy these contents into the auditbeat agent folder :</p>
+<div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Debian</label><div class="tabbed-content">
+<pre class="highlight"><code>/etc/auditbeat</code></pre>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">CentOS</label><div class="tabbed-content">
+<pre class="highlight"><code>/etc/auditbeat</code></pre>
+</div>
+</div>
+<p>Then start the program :</p>
+<div class="tabbed-set" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><label for="__tabbed_3_1">Debian</label><div class="tabbed-content">
+<pre class="highlight"><code>sudo systemctl enable auditbeat.service    # enable at boot
+sudo service auditbeat start</code></pre>
+</div>
+<input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><label for="__tabbed_3_2">CentOS</label><div class="tabbed-content">
+<pre class="highlight"><code>sudo systemctl enable auditbeat.service    # enable at boot
+sudo service auditbeat start</code></pre>
+</div>
+</div>
+<h2 id="network-rules">Network rules</h2>
+<p>Auditbeat agent requires following network rule to communicate with Nybble's servers:</p>
+<table>
+<thead>
+<tr>
+<th>Source</th>
+<th>Destination</th>
+<th>Protocol</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>auditbeat server</td>
+<td><code>&lt;clientshortname&gt;-kafka-bootstrap.nybble-analytics.io</code> <br> <code>&lt;clientshortname&gt;-kafka-broker-[0-9].nybble-analytics.io</code></td>
+<td>TCP 9094</td>
+<td>Event sending</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

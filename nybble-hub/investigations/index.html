@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Nybble Engineering Team" /><link rel="canonical" href="https://docs.nybble-security.io/nybble-hub/investigations/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Investigations - Nybble Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Investigations";
+        var mkdocs_page_input_path = "nybble-hub/investigations.md";
+        var mkdocs_page_url = "/nybble-hub/investigations/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Nybble Docs
+        </a>
+        <div class="version">
+          2025.03.01
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Nybble Hub</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../authentication/">Authentication</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../alert-triage/">Alert Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dashboards/">Dashboards</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Investigations</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#investigation-main-table">Investigation main table</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#investigation-details">Investigation details</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#summary">Summary</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#related-alerts">Related Alerts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mitre-attck-diagram">Mitre Att&amp;CK diagram</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#history">History</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#comments">Comments</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../profile/">Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../register/">Registration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../privacy-policy/">Privacy policy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../release-notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions/">Terms and Conditions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SIEM/EDR Connectors</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/elastic-connector/">Elastic Connector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/sekoia-connector/">Sekoia Connector</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Nybble Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Nybble Hub</li>
+      <li class="breadcrumb-item active">Investigations</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="investigations">Investigations</h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A client or L2 analyst profile is required to follow this documentation</p>
+</div>
+<h2 id="investigation-main-table">Investigation main table</h2>
+<p><img alt="Invest Main Table" src="../../img/nybble-hub/investigations/invest-main-table.png" />
+Here you have an overview of all investigations done by Nybble.<br />
+By default, this table is ordered by update time, to display you the freshest investigations first. You can filter this table by clicking on the header icons:</p>
+<ul>
+<li><img alt="Filter icon" src="../../img/nybble-hub/investigations/filter-icon-ronde.png" style="position:relative;top:5px" /> to open a filter box with available values</li>
+<li><img alt="Sort icon" src="../../img/nybble-hub/investigations/sort-icon-ronde.png" style="position:relative;top:5px" /> to change the display order</li>
+</ul>
+<p>You can click on the investigation name to display its details.</p>
+<h2 id="investigation-details">Investigation details</h2>
+<h3 id="summary">Summary</h3>
+<p><img alt="Invest Summary" src="../../img/nybble-hub/investigations/invest-summary.png" />
+The summary panel is divided into 3 blocks:<br />
+(1) General Informations: gives you some timestamp informations, status, priority, and which L2 analyst is in charge of the investigation<br />
+(2) Key findings: summary of the investigation with key informations. More details on the report<br />
+(3) Finished panel: visible only if an investigation is finished, it gave you the final status and allows you to download the detailed report.</p>
+<h3 id="related-alerts">Related Alerts</h3>
+<p><img alt="Related Alerts" src="../../img/nybble-hub/investigations/alerts.png" />
+This table summarizes which alerts have been correlated and investigated. Usually multiple alerts are correlated as an attack scenario.</p>
+<h3 id="mitre-attck-diagram">Mitre Att&amp;CK diagram</h3>
+<p><img alt="Mitre Attack diagram" src="../../img/nybble-hub/investigations/mitre.png" />
+<a href="https://attack.mitre.org/">Mitre Att&amp;CK</a> is a knowledge base of adversary tactics and techniques. It helps to represent and classify observations made to better understand and answer to the threat.<br />
+Nybble is classifying every found technic using this definition, and represent them on a diagram, based on an attack timeframe:</p>
+<ul>
+<li>usually, tactics at left are considered as first steps of an attack scenario (network reconnaissance, tooling)</li>
+<li>tactics at right are considered as the end of an attack scenario (with the final goals: impact or exfiltration). </li>
+</ul>
+<p>In short, <strong>higher the right numbers are, higher the impact is, more successful was the attack scenario</strong>.</p>
+<h3 id="history">History</h3>
+<p><img alt="Alert history" src="../../img/nybble-hub/investigations/history.png" />
+This tab displays a timeframe of any actions done by the client or any Nybble analyst on this investigation.</p>
+<h3 id="comments">Comments</h3>
+<p><img alt="Alert comments" src="../../img/nybble-hub/investigations/comments.png" />
+Here you can read any comments / interrogations written by the analyst in charge of the investigation (newest in first).<br />
+You can also interact by posting a comment / question which will be read and answered by Nybble.<br />
+Usually, it permits to mvoe forward on investigation by providing further infos without sending multiple mails / calls, everything is summarized on a single page.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../dashboards/" class="btn btn-neutral float-left" title="Dashboards"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../profile/" class="btn btn-neutral float-right" title="Profile">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../dashboards/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../profile/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

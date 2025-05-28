@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Nybble Engineering Team" /><link rel="canonical" href="https://docs.nybble-security.io/elastic-by-nybble/cisco-onboarding/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Nybble Security Analytics: Onboard a Cisco Device - Nybble Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Nybble Security Analytics: Onboard a Cisco Device";
+        var mkdocs_page_input_path = "elastic-by-nybble/cisco-onboarding.md";
+        var mkdocs_page_url = "/elastic-by-nybble/cisco-onboarding/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Nybble Docs
+        </a>
+        <div class="version">
+          2025.03.01
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Nybble Hub</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/authentication/">Authentication</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/alert-triage/">Alert Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/dashboards/">Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/investigations/">Investigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/profile/">Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/register/">Registration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/privacy-policy/">Privacy policy</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/release-notes/">Release Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/terms-and-conditions/">Terms and Conditions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SIEM/EDR Connectors</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/elastic-connector/">Elastic Connector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/sekoia-connector/">Sekoia Connector</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Nybble Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Nybble Security Analytics: Onboard a Cisco Device</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nybble-security-analytics-onboard-a-cisco-device">Nybble Security Analytics: Onboard a Cisco Device</h1>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>Onboarding a network device requires a filebeat collector somewhere in your network.<br />
+See <a href="../filebeat-collector/">Nybble Security Analytics: Filebeat collector</a> for further details.</p>
+<p>Grab the DNS name of the nearest filebeat collector you've installed in your network.</p>
+<h2 id="cisco-amp-onboarding">Cisco AMP onboarding</h2>
+<p>To configure the Cisco AMP fileset you will need to retrieve your <code>client_id</code> and <code>api_key</code> from the AMP dashboard.<br />
+For more information on how to retrieve these credentials, please reference the <a href="https://api-docs.amp.cisco.com/api_resources?api_host=api.amp.cisco.com&amp;api_version=v1">Cisco AMP API documentation</a>.</p>
+<p>The URL configured for the API depends on which region your AMP is located, currently there are three choices:  </p>
+<ul>
+<li>api.amp.cisco.com</li>
+<li>api.apjc.amp.cisco.com</li>
+<li>api.eu.amp.cisco.com</li>
+</ul>
+<p>If new endpoints are added by Cisco in the future, please reference the API URL list located at the <a href="https://api-docs.amp.cisco.com/">Cisco AMP API Docs</a>.</p>
+<p>To configure the collection on filebeat:  </p>
+<ol>
+<li>Locate the cisco AMP section in filebeat.yml to turn on the AMP collection:
+<pre class="highlight"><code class="language-yaml">  amp:
+    enabled: false # turn it to true</code></pre></li>
+<li>On the same section, fill the <code>client_id</code> and <code>api_key</code> values:
+<pre class="highlight"><code class="language-yaml">    var.client_id: &lt;client_id&gt;
+    var.api_key: &lt;api_key&gt;</code></pre></li>
+<li>Restart the filebeat agent.</li>
+</ol>
+<p>Source for more details: <a href="https://www.elastic.co/guide/en/beats/filebeat/7.17/filebeat-module-cisco.html#_amp_fileset_settings">Elastic Filebeat : AMP module</a></p>
+<h2 id="cisco-ios-onboarding">Cisco IOS onboarding</h2>
+<ol>
+<li>Locate the cisco IOS section in filebeat.yml to turn on the IOS collection:
+<pre class="highlight"><code class="language-yaml">  ios:
+    enabled: false # turn it to true</code></pre>
+Log collection will use syslog, on port 1820, UDP. </li>
+<li>restart the filebeat agent. </li>
+<li>Please refer to Cisco IOS documentation related to your device version. Usually, commands to enable syslog are:<br />
+<pre class="highlight"><code>logging host &lt;filebeat_ip&gt;
+logging trap informational</code></pre></li>
+</ol>
+<p>Source for more details: <a href="https://www.elastic.co/guide/en/beats/filebeat/7.17/filebeat-module-cisco.html#_ios_fileset_settings">Elastic Filebeat : IOS module</a></p>
+<h2 id="cisco-umbrella-onboarding">Cisco Umbrella onboarding</h2>
+<p>The Cisco Umbrella fileset primarily focuses on reading CSV files from an S3 bucket using the filebeat S3 input.</p>
+<p>To configure Cisco Umbrella to log to a self-managed S3 bucket please follow the <a href="https://docs.umbrella.com/deployment-umbrella/docs/log-management">Cisco Umbrella User Guide</a>, and the <a href="https://www.elastic.co/guide/en/beats/filebeat/7.17/filebeat-input-aws-s3.html">AWS S3 input documentation</a> to setup the necessary Amazon SQS queue.</p>
+<p>Nybble has enabled the 4 supported filesets collection:  </p>
+<ul>
+<li>Proxy</li>
+<li>Cloud Firewall </li>
+<li>IP Logs </li>
+<li>DNS logs</li>
+</ul>
+<p>To configure the collection on filebeat:  </p>
+<ol>
+<li>Locate the cisco Umbrella section in filebeat.yml to turn on the Umbrella collection:
+<pre class="highlight"><code class="language-yaml">  umbrella:
+    enabled: false # turn it to true</code></pre></li>
+<li>On the same section, fill the <code>queue_url</code>, <code>access_key_id</code> and <code>secret_access_key</code> values:
+<pre class="highlight"><code class="language-yaml">    var.queue_url: https://&lt;AWS S3 SQS Queue URL&gt;
+    var.access_key_id: &lt;access_key_id&gt;
+    var.secret_access_key: &lt;secret_access_key&gt;</code></pre></li>
+<li>Restart the filebeat agent.</li>
+</ol>
+<p>Source for more details: <a href="https://www.elastic.co/guide/en/beats/filebeat/7.17/filebeat-module-cisco.html#_umbrella_fileset_settings">Elastic Filebeat : Umbrella module</a></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

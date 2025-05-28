@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Nybble Engineering Team" /><link rel="canonical" href="https://docs.nybble-security.io/fr/connectors/sekoia-connector/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Connecteur Sekoia - Documentation Nybble</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Connecteur Sekoia";
+        var mkdocs_page_input_path = "connectors/sekoia-connector.fr.md";
+        var mkdocs_page_url = "/fr/connectors/sekoia-connector/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../" class="icon icon-home"> Documentation Nybble
+        </a>
+        <div class="version">
+          2025.03.01
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../">Accueil</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Nybble Hub</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/overview/">A Propos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/authentication/">Authentification</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/alert-triage/">Qualification d'Alerte</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/dashboards/">Tableaux de bord</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/investigations/">Investigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/profile/">Profil</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/register/">Inscription</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/privacy-policy/">Politique de Confidentialité</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/release-notes/">Notes de version</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../nybble-hub/terms-and-conditions/">Conditions Générales d'Utilisation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Connecteurs SIEM/EDR</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">A Propos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../elastic-connector/">Connecteur Elastic</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Connecteur Sekoia</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#en-bref">En bref</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#1-sekoia-configuration-sso-partie-12">1. Sekoia: Configuration SSO (partie 1/2)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2-connecteur-nybble-hub">2. Connecteur Nybble Hub</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#3-sekoia-configuration-sso-partie-22">3. Sekoia: Configuration SSO (partie 2/2)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#4-sekoia-playbook">4. Sekoia : playbook</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#account">Account</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#playbook">Playbook</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">Documentation Nybble</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../" class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Connecteurs SIEM/EDR</li>
+      <li class="breadcrumb-item active">Connecteur Sekoia</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <p><img alt="Sekoia Logo" src="../../../img/connectors/sekoia.png" style="width:800px; margin:0 auto; display:block" /></p>
+<h1 id="configurer-un-connecteur-sekoia">Configurer un connecteur Sekoia</h1>
+<h2 id="en-bref">En bref</h2>
+<p>Suivez cette page pour envoyer vos alertes Sekoia.IO vers Nybble Hub.<br />
+Nous allons configurer un connecteur dans le Hub, un Playbook Sekoia et le SSO pour les analystes.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depuis la version 2024.06.01, l'utilisation du SSO peut être désactivé. Cependant, cela réduit les capacités d'analyse et de décision de notre communauté d'analyste.<br />
+Si vous souhaitez vous passer du SSO, omettez les chapitres 1 et 3 de cette documentation.</p>
+</div>
+<h2 id="1-sekoia-configuration-sso-partie-12">1. Sekoia: Configuration SSO (partie 1/2)</h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Documentation officielle Sekoia : https://docs.sekoia.io/getting_started/sso/openid_connect/</p>
+</div>
+<p>Nos analystes font appel au SSO Nybble pour se connecter à votre communauté Sekoia.<br />
+Les noms d'utilisateurs finissent par <code>@nybble.bzh</code>. C'est le domaine qu'il faut valider.</p>
+<p>Après validation, copier la <code>Single Sign-on URL</code> (de forme <code>https://app.sekoia.io/user/oidc/&lt;some_uuid&gt;</code>), nous allons l'utiliser dans la création du connecteur côté Nybble. </p>
+<p>Le SSO requiert également un rôle spécifique, restreint, pour nos analystes.<br />
+Créez un rôle nommé <code>nybble_analysts</code> avec les permissions suivantes :</p>
+<p><img alt="sekoia custom role" src="../../../img/connectors/sekoia-custom-role.png" style="width:500px;" /></p>
+<h2 id="2-connecteur-nybble-hub">2. Connecteur Nybble Hub</h2>
+<ol>
+<li>Se connecter au Nybble Hub avec vos identifiants</li>
+<li>Aller dans Paramètres &gt; Connecteurs</li>
+<li>
+<p>Ajoutez un connecteur Sekoia avec les paramètres suivants :</p>
+<table>
+<thead>
+<tr>
+<th>Champ</th>
+<th>Explication</th>
+<th>Valeur usuelle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Display Name</td>
+<td>pour l'affichage dans le hub</td>
+<td><code>sekoia</code></td>
+</tr>
+<tr>
+<td>SSO Login URL</td>
+<td>URL SSO (chapitre précédent)</td>
+<td><code>https://app.sekoia.io/user/oidc/&lt;some_uuid&gt;</code></td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Cliquez sur Sauvegarder</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>A ce stade, le mot de passe du connecteur sera généré et disponible dans une fenêtre contextuelle.<br />
+Assurez-vous de copier et de stocker ce mot de passe dans un endroit sécurisé car il ne sera plus affiché !<br />
+Vous pouvez toujours le réinitialiser par la suite, mais vous devrez mettre à jour tous les webhooks avec la nouvelle valeur.</p>
+</div>
+</li>
+<li>
+<p>Téléchargez le fichier de configuration SSO.</p>
+</li>
+</ol>
+<h2 id="3-sekoia-configuration-sso-partie-22">3. Sekoia: Configuration SSO (partie 2/2)</h2>
+<ol>
+<li>
+<p>Terminez la configuration SSO dans Sekoia avec les valeurs suivantes :</p>
+<table>
+<thead>
+<tr>
+<th>Champ</th>
+<th>Explication</th>
+<th>Valeur</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create account</td>
+<td>Pour créer les comptes Nybble à la volée</td>
+<td><code>Yes</code></td>
+</tr>
+<tr>
+<td>Role by default</td>
+<td>Rôle spécifique</td>
+<td><code>nybble_analysts</code></td>
+</tr>
+<tr>
+<td>SSO configuration &gt; Authentication Provider URL</td>
+<td>URL SSO Nybble</td>
+<td><code>https://auth.nybble-analytics.io/</code></td>
+</tr>
+<tr>
+<td>SSO configuration &gt; Client ID</td>
+<td>clientID (connecteur Hub)</td>
+<td>voir le fichier téléchargé</td>
+</tr>
+<tr>
+<td>SSO configuration &gt; Client Secret</td>
+<td>client Secret (connecteur Hub)</td>
+<td>voir le fichier téléchargé</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Cliquez sur Save Changes.</p>
+</li>
+</ol>
+<h2 id="4-sekoia-playbook">4. Sekoia : playbook</h2>
+<p>Nybble a développé une intégration Sekoia native :</p>
+<ul>
+<li>playbook template</li>
+<li>playbook action : send alert</li>
+</ul>
+<h3 id="account">Account</h3>
+<ol>
+<li>Allez dans Playbooks -&gt; Accounts -&gt; new, et chercher Nybble</li>
+<li>Remplissez le formulaire avec:</li>
+</ol>
+<p><img alt="nybble account in sekoia" src="../../../img/connectors/sekoia-connector-nybble-account.png" style="width:600px;" /></p>
+<h3 id="playbook">Playbook</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Pour chaque alerte que vous envoyez à Nybble, contactez nos Professional Services<br />
+Ils vous confirmeront la bonne intégration de ces règles dans le Hub, notamment en ce qui concerne les règles personnalisées.</p>
+</div>
+<ol>
+<li>Allez dans Playbooks -&gt; New Playbook -&gt; use a template -&gt; chercher "nybble"</li>
+<li>Configurez l'étape <code>Alert Created</code> sur la partie Trigger Configuration</li>
+<li>Selectionnez l'account nécessaire sur chaque étape du playbook</li>
+<li>Sauvegardez et activez le playbook</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../elastic-connector/" class="btn btn-neutral float-left" title="Connecteur Elastic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 Nybble Team pour l'entreprise <a href="https://nybble-security.io">Nybble</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../elastic-connector/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

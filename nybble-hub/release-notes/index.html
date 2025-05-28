@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Nybble Engineering Team" /><link rel="canonical" href="https://docs.nybble-security.io/nybble-hub/release-notes/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Release Notes - Nybble Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Release Notes";
+        var mkdocs_page_input_path = "nybble-hub/release-notes.md";
+        var mkdocs_page_url = "/nybble-hub/release-notes/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Nybble Docs
+        </a>
+        <div class="version">
+          2025.03.01
+        </div><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Nybble Hub</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../authentication/">Authentication</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../alert-triage/">Alert Triage</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dashboards/">Dashboards</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../investigations/">Investigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../profile/">Profile</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../register/">Registration</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../privacy-policy/">Privacy policy</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Release Notes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#release-20250301">Release 2025.03.01</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20250201">Release 2025.02.01</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20250101">Release 2025.01.01</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20240601">Release 2024.06.01</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20240401">Release 2024.04.01</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20240201">Release 2024.02.01</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20240101">Release 2024.01.01</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20231201-pacu">Release 2023.12.01 - Pacu</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20231001-glaucus-atlanticus">Release 2023.10.01 - Glaucus atlanticus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20230901-dugong">Release 2023.09.01 - Dugong</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20230601-sunda-colugo">Release 2023.06.01 - Sunda Colugo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20230501-dumbo-octopus">Release 2023.05.01 - Dumbo Octopus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20230201-babiroussas">Release 2023.02.01 - Babiroussas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20230101-narval">Release 2023.01.01 - Narval</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20221201-cirrocumulus">Release 2022.12.01 - Cirrocumulus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20221101-cumulonimbus">Release 2022.11.01 - Cumulonimbus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20221001-altocumulus">Release 2022.10.01 - Altocumulus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20220901-cirrostratus">Release 2022.09.01 - Cirrostratus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20220801-nimbostratus">Release 2022.08.01 - Nimbostratus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#release-20220701-stratocumulus">Release 2022.07.01 - Stratocumulus</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../terms-and-conditions/">Terms and Conditions</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">SIEM/EDR Connectors</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/overview/">About</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/elastic-connector/">Elastic Connector</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../connectors/sekoia-connector/">Sekoia Connector</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Nybble Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Nybble Hub</li>
+      <li class="breadcrumb-item active">Release Notes</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="nybble-hub-release-notes">Nybble Hub: Release Notes</h1>
+<h2 id="release-20250301">Release 2025.03.01</h2>
+<ul>
+<li>Better RawEvent display using dedicated scrolling on alert page</li>
+<li>Fix bug on registration which prevent saving infos if you provide only a LinkedIn CV.</li>
+</ul>
+<h2 id="release-20250201">Release 2025.02.01</h2>
+<ul>
+<li>Improvment on analyst decision: splitted mandatory fields for "impact" and "decision"</li>
+<li>Fix bug on hunting reports which prevents some users to submit new reports</li>
+</ul>
+<h2 id="release-20250101">Release 2025.01.01</h2>
+<ul>
+<li>Fix minor bugs on the new onboarding process.</li>
+<li>New login page, simplified.</li>
+</ul>
+<h2 id="release-20240601">Release 2024.06.01</h2>
+<ul>
+<li>Onboarding process has been simplified: less mails and steps, one single account.</li>
+<li>Connectors: SSO can be disabled at creation.</li>
+</ul>
+<h2 id="release-20240401">Release 2024.04.01</h2>
+<ul>
+<li>Sekoia integration is now available for all clients !</li>
+<li>Alerts are now sorted by remaining SLA</li>
+<li>Mail notifications in registration platform</li>
+<li>UX improvments on tables. </li>
+</ul>
+<h2 id="release-20240201">Release 2024.02.01</h2>
+<ul>
+<li>BETA : Scoring calculation for analyst.</li>
+<li>Mail notifications for users, settings available in profile</li>
+<li>Fixing RAW Event display bug on alerts.</li>
+</ul>
+<h2 id="release-20240101">Release 2024.01.01</h2>
+<ul>
+<li>Global speed and user experience improvments : less fetchs, cache management</li>
+<li>Notifications (bottom left) to display status of any actions</li>
+<li>Fixing bad 12 months stat on dashboard</li>
+</ul>
+<h2 id="release-20231201-pacu">Release 2023.12.01 - Pacu</h2>
+<ul>
+<li>Hub homepage rebranding, following new Nybble styling guidelines</li>
+<li>Display registration infos in your profile</li>
+<li>Alerts: additional context datas coming from clients are displayed in wiki side.</li>
+<li>Registration &amp; dojo platform:<ul>
+<li>full history of your registration &amp; tests</li>
+<li>test retries</li>
+</ul>
+</li>
+<li>internal components global update and security improvements</li>
+</ul>
+<h2 id="release-20231001-glaucus-atlanticus">Release 2023.10.01 - Glaucus atlanticus</h2>
+<ul>
+<li>PRIVATE BETA: registration process for Nybblers:<ul>
+<li>enter all required informations (company, personal, references)</li>
+<li>pass analyst or hunter tests (or both!)</li>
+<li>and become a Nybbler 💪 💵</li>
+</ul>
+</li>
+<li>documentation global update and rebranding, following new Nybble styling guidelines</li>
+</ul>
+<h2 id="release-20230901-dugong">Release 2023.09.01 - Dugong</h2>
+<ul>
+<li>1st release of sending alert results back to MSSPs (TheHive supported)</li>
+<li>Alerts: improvements following Hacktoberfest CTF feedback</li>
+<li>Threat Hunting Campaigns: improvements following Hacktoberfest CTF feedback</li>
+<li>Language is now determined by Browser as default</li>
+<li>internal components global update</li>
+</ul>
+<h2 id="release-20230601-sunda-colugo">Release 2023.06.01 - Sunda Colugo</h2>
+<ul>
+<li>A Nybbler can be both analyst and hunter now</li>
+<li>improved elastic connector speed</li>
+</ul>
+<h2 id="release-20230501-dumbo-octopus">Release 2023.05.01 - Dumbo Octopus</h2>
+<ul>
+<li>client can now download custom logstash configuration to deploy central agent (Elastic By Nybble)</li>
+<li>internal components global update</li>
+</ul>
+<h2 id="release-20230201-babiroussas">Release 2023.02.01 - Babiroussas</h2>
+<ul>
+<li>fixing display glitch on Investigation Details</li>
+<li>Alerts: clicking on Elastic field opens the SIEM with accurate filter</li>
+</ul>
+<h2 id="release-20230101-narval">Release 2023.01.01 - Narval</h2>
+<ul>
+<li>Official support for Elastic (Bring your Own SIEM)</li>
+</ul>
+<h2 id="release-20221201-cirrocumulus">Release 2022.12.01 - Cirrocumulus</h2>
+<ul>
+<li>Nybble Hub mobile edition: all views are now optimized for mobile display</li>
+</ul>
+<h2 id="release-20221101-cumulonimbus">Release 2022.11.01 - Cumulonimbus</h2>
+<ul>
+<li>Implementing APIKEYs per user: you can interact with our API from 3rd party tools</li>
+<li>Fixing download issues after SSO implementation</li>
+</ul>
+<h2 id="release-20221001-altocumulus">Release 2022.10.01 - Altocumulus</h2>
+<ul>
+<li>Single Sign On 🔐 is globally available:<ul>
+<li>clients, analysts and hunters can now access both SIEM(s) and Hub using the same credentials and login only once per browser</li>
+<li>security enforcement by requiring a 2nd factor authentication (MFA)</li>
+<li>password reset by receiving a temporary link by mail</li>
+</ul>
+</li>
+<li>fixing issue on configuration download</li>
+</ul>
+<h2 id="release-20220901-cirrostratus">Release 2022.09.01 - Cirrostratus</h2>
+<ul>
+<li>fixing investigation display bug</li>
+<li>internal quality code review and enhancement </li>
+<li>1st release of user guides</li>
+</ul>
+<h2 id="release-20220801-nimbostratus">Release 2022.08.01 - Nimbostratus</h2>
+<ul>
+<li>settings menu for clients, to download configuration files</li>
+<li>alerts wiki pages : analysts can contribute by posting an edit suggestion. </li>
+<li>adding french language</li>
+<li>fixing CSS issues on small screens</li>
+<li>users can now edit their profile informations</li>
+<li>various improvements based on FIC feedback</li>
+<li>internal components upgrade routine</li>
+</ul>
+<h2 id="release-20220701-stratocumulus">Release 2022.07.01 - Stratocumulus</h2>
+<p>Core modules:</p>
+<ul>
+<li>statistics and dashboards for client</li>
+<li>hunt campaign and report modules </li>
+<li>alert management interface</li>
+<li>investigation interface for clients</li>
+<li>admin interface</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../privacy-policy/" class="btn btn-neutral float-left" title="Privacy policy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../terms-and-conditions/" class="btn btn-neutral float-right" title="Terms and Conditions">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+      <p>Copyright &copy; 2025 Nybble Engineering Team for the <a href="https://nybble-security.io">Nybble Company</a>.</p>
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../privacy-policy/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../terms-and-conditions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
