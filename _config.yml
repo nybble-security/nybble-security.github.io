@@ -1,0 +1,39 @@
+title: "Nybble — IT & Cyber Consulting"
+description: "Combinez le consulting IT & Cyber au lieu de les opposer."
+url: "https://nybble-security.io" # à ajuster si besoin
+baseurl: "" # généralement vide pour domaine racine
+
+
+# Build
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+
+defaults:
+- scope:
+    path: ""
+    type: "posts"
+  values:
+    layout: post
+    seo:
+      type: BlogPosting
+- scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: default
+
+
+# Plugins autorisés par GitHub Pages
+plugins:
+- jekyll-seo-tag
+- jekyll-sitemap
+- jekyll-feed
+
+
+# Exclusions (non publiées)
+exclude: ["README.md", "node_modules", "package.json", "package-lock.json"]
+
+
+# Langue (utile pour SEO)
+lang: fr
