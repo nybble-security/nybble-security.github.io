@@ -1,14 +1,28 @@
 ---
 layout: default
 ---
-<article class="py-16">
-    <div class="mx-auto max-w-3xl px-6">
-        <header class="mb-8">
-            <h1 class="text-3xl font-semibold">{{ page.title }}</h1>
-            <p class="mt-2 text-xs text-slate-500">{{ page.date | date: "%A %-d %B %Y" }}</p>
-        </header>
-        <div class="prose prose-slate max-w-none">
-            {{ content }}
-        </div>
+
+{% assign chars = content | strip_html | size %}
+{% assign mins = chars | divided_by: 1200 %}
+{% if mins < 1 %}{% assign mins = 1 %}{% endif %}
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <span>{{ page.date | date: "%d %b %Y" }}</span>
+      <span>•</span>
+      <span>{{ mins }} min de lecture</span>
+      {% if page.author %}<span>• {{ page.author }}</span>{% endif %}
     </div>
+    {% if page.image %}
+      <figure class="post-hero">
+        <img src="{{ page.image }}" alt="">
+      </figure>
+    {% endif %}
+  </header>
+
+  <div class="post-body">
+    {{ content }}
+  </div>
 </article>

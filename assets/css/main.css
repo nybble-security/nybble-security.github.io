@@ -1,6 +1,17 @@
 :root{
+  /* Palette Nybble (depuis capture) */
+  --bg: #0e2530;           /* fond global très sombre bleuté */
+  --bg-soft: #1d4151;      /* teinte principale (bleu-vert) */
+  --bg-soft-2: #2f5d6c;    /* variante plus claire pour dégradés */
+  --fg: #e6f0f2;           /* texte sur fond sombre */
+  --fg-dark: #0b0b0b;      /* texte sur fond clair */
+  --muted: #cbd5e1;        /* gris bleuté pour paragraphes */
+  --line: #2b4a56;         /* bordures discrètes sur fond sombre */
+  --line-light: #e2e8f0;   /* bordures sur fond clair */
+  --accent: #9a3400;       /* orange cuivre (CTA / barres) */
+}
+html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg)}
-
 
 /* Typo générale */
 h1,h2,h3,h4{letter-spacing:-0.02em}
@@ -9,42 +20,50 @@ h2{font-size:clamp(1.5rem,2.5vw,2rem);line-height:1.2;font-weight:600;margin-top
 h3{font-size:1.1rem;font-weight:600}
 p{color:var(--muted)}
 
-
-/* Conteneurs */
+/* Sections & conteneurs */
 section{scroll-margin-top:6rem}
-
+.section-soft{background:linear-gradient(180deg,var(--bg-soft) 0%, var(--bg-soft-2) 100%)}
 
 /* Liens & boutons */
 a{transition:opacity .2s ease}
 a:hover{opacity:.9}
-.button{display:inline-block;padding:.75rem 1.25rem;border-radius:0.75rem;background:var(--accent);color:#fff}
-.button-outline{display:inline-block;padding:.75rem 1.25rem;border-radius:0.75rem;border:1px solid var(--line)}
-
+.button{display:inline-block;padding:.75rem 1.25rem;border-radius:0.75rem;background:var(--accent);color:#fff;font-weight:600}
+.button:hover{opacity:.95}
+.button-outline{display:inline-block;padding:.75rem 1.25rem;border-radius:0.75rem;border:1px solid var(--line-light);color:#fff}
 
 /* Cartes */
-.card{border:1px solid var(--line);border-radius:1rem;padding:1.25rem;background:#fff}
+.card{border:1px solid var(--line);border-radius:1rem;padding:1.25rem;background:rgba(255,255,255,0.02)}
 
+/* Hero avec image de fond */
+.hero{position:relative;min-height:80vh;display:flex;align-items:center;color:#fff;background:
+  linear-gradient(180deg, rgba(14,37,48,0.55) 0%, rgba(14,37,48,0.85) 100%),
+  var(--hero) center/cover no-repeat;}
+.hero .content{max-width:72rem;margin:0 auto;padding:6rem 1.5rem;}
+.hero h1{color:#fff}
+
+/* Bande de logos horizontale */
+.logo-strip{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;opacity:.95}
+.logo-strip img{height:28px;filter:grayscale(0);opacity:.9}
+.logo-strip .caption{font-size:.9rem;color:#fff;margin-right:1rem;opacity:.85}
 
 /* Blog "prose" minimaliste sans plugin */
-.richtext{font-size:1.05rem;line-height:1.7;color:var(--fg)}
+.richtext{font-size:1.05rem;line-height:1.7;color:#fff}
 .richtext p{margin:1rem 0;color:var(--muted)}
-.richtext h1{font-size:2.25rem;margin:2rem 0 1rem}
-.richtext h2{font-size:1.5rem;margin:2rem 0 .75rem}
-.richtext h3{font-size:1.2rem;margin:1.5rem 0 .5rem}
+.richtext h1{font-size:2.25rem;margin:2rem 0 1rem;color:#fff}
+.richtext h2{font-size:1.5rem;margin:2rem 0 .75rem;color:#fff}
+.richtext h3{font-size:1.2rem;margin:1.5rem 0 .5rem;color:#fff}
 .richtext ul,.richtext ol{margin:1rem 0 1rem 1.25rem}
 .richtext li{margin:.4rem 0}
 .richtext blockquote{border-left:3px solid var(--line);padding-left:1rem;color:var(--muted);font-style:italic}
 .richtext pre{background:#0f172a;color:#e2e8f0;border-radius:.75rem;padding:1rem;overflow:auto}
-.richtext code{background:#f8fafc;padding:.15rem .35rem;border-radius:.35rem}
+.richtext code{background:#0b2530;padding:.15rem .35rem;border-radius:.35rem;color:#e2e8f0}
 .richtext img{border-radius:.75rem;border:1px solid var(--line);max-width:100%}
-
 
 /* Header translucide + footer */
 header.backdrop-blur{backdrop-filter:saturate(180%) blur(12px)}
-footer{background:#fff}
+footer{background:var(--bg-soft)}
 
-
-/* Utilitaires rapides (si Tailwind pas chargé pour X raison) */
+/* Utilitaires rapides */
 .mx-auto{margin-left:auto;margin-right:auto}
 .max-w-6xl{max-width:72rem}
 .px-6{padding-left:1.5rem;padding-right:1.5rem}

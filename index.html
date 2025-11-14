@@ -5,29 +5,26 @@ title: "IT & Cyber Consulting — Nybble"
 
 <main>
   <!-- HERO -->
-  <section id="hero" class="min-h-[70vh] flex items-center">
-    <div class="mx-auto max-w-6xl px-6 py-24 grid gap-10 md:grid-cols-2">
+  <section id="hero" class="hero" style="--hero: url('/assets/img/hero-banner.webp')">
+  <div class="content">
+    <div class="grid gap-10 md:grid-cols-2">
       <div>
         <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
           Combinez <span class="underline decoration-4">IT & Cyber</span>,
           au lieu de les opposer.
         </h1>
-        <p class="mt-6 text-lg text-slate-600 max-w-prose">
+        <p class="mt-6 text-lg max-w-prose">
           Nous aidons les organisations à concilier excellence IT, sécurité
           pragmatique et vitesse d'exécution. Un seul partenaire, des décisions
           cohérentes, des risques maîtrisés.
         </p>
         <div class="mt-8 flex gap-3">
-          <a href="#contact" class="px-5 py-3 rounded-xl bg-black text-white">
-            Parlez-nous de votre besoin
-          </a>
-          <a href="#offres" class="px-5 py-3 rounded-xl border">
-            Nos offres
-          </a>
+          <a href="#contact" class="button">Parlez-nous de votre besoin</a>
+          <a href="#offres" class="button-outline">Nos offres</a>
         </div>
       </div>
       <div class="self-center">
-        <div class="rounded-2xl border p-6">
+        <div class="card">
           <ul class="space-y-4 text-sm">
             <li class="flex items-start gap-3"><span class="mt-1">✅</span>
               Gouvernance IT & Cyber unifiée</li>
@@ -41,10 +38,11 @@ title: "IT & Cyber Consulting — Nybble"
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- OFFRES -->
-  <section id="offres" class="py-20 bg-slate-50">
+  <section id="offres" class="section-soft py-20 bg-slate-50">
     <div class="mx-auto max-w-6xl px-6">
       <h2 class="text-2xl font-semibold">Offres de consulting</h2>
       <div class="mt-8 grid gap-6 md:grid-cols-3">
@@ -68,7 +66,7 @@ title: "IT & Cyber Consulting — Nybble"
   </section>
 
   <!-- APPROCHE -->
-  <section id="approche" class="py-20">
+  <section id="approche" class="section-soft py-20">
     <div class="mx-auto max-w-6xl px-6 grid gap-10 md:grid-cols-2">
       <div>
         <h2 class="text-2xl font-semibold">Notre approche</h2>
@@ -101,14 +99,19 @@ title: "IT & Cyber Consulting — Nybble"
     </div>
   </section>
 
-  <!-- RÉFÉRENCES (placeholder simple) -->
-  <section id="references" class="py-16 bg-slate-50">
-    <div class="mx-auto max-w-6xl px-6">
-      <h2 class="text-2xl font-semibold">Références</h2>
-      <p class="mt-4 text-slate-600">Études de cas disponibles sur demande.
-      Contactez-nous.</p>
+  <!-- RÉFÉRENCES (logos horizontaux) -->
+<section id="references" class="py-8" style="background:var(--accent)">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="logo-strip">
+      <span class="caption">Ils nous font confiance</span>
+      <!-- Remplacez les src par vos icônes monochromes/PNG/SVG -->
+      <img src="/assets/img/logos/elastic.svg" alt="Elastic"/>
+      <img src="/assets/img/logos/microsoft.svg" alt="Microsoft"/>
+      <img src="/assets/img/logos/paddle.svg" alt="Paddle"/>
+      <img src="/assets/img/logos/partner1.svg" alt="Partenaire"/>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- BLOG PREVIEW -->
   <section id="blog" class="py-16">
@@ -140,6 +143,18 @@ title: "IT & Cyber Consulting — Nybble"
         <button class="px-5 py-3 rounded-xl bg-white text-black w-max" type="submit">Envoyer</button>
       </form>
       <p class="mt-6 text-sm text-slate-400">Ou écrivez-nous : <a class="underline" href="mailto:contact@nybble-security.io">contact@nybble-security.io</a></p>
+    </div>
+  </section>
+  <!-- CALL TO ACTION FINALE -->
+  <section id="cta" class="py-16" style="background:var(--accent);color:#fff">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold mb-4">Vous souhaitez être accompagnés par Nybble ?</h2>
+      <p class="max-w-2xl mx-auto mb-8 text-sm md:text-base opacity-90">
+        Contactez nos experts pour renforcer la convergence IT et Cyber dans votre organisation.
+      </p>
+      <a href="#contact" class="button" style="background:#fff;color:var(--accent);font-weight:600">
+        Nous contacter
+      </a>
     </div>
   </section>
 </main>

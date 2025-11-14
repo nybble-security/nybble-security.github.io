@@ -1,0 +1,33 @@
+/* assets/css/blog.css */
+/* Active sur <body class="blog"> uniquement */
+
+body.blog{background:#ffffff;color:#111}
+header.backdrop-blur{background:#ffffffcc;border-bottom:1px solid #e5e7eb}
+footer{background:#fff;border-top:1px solid #e5e7eb}
+
+/* Article */
+.post{max-width:720px;margin:0 auto;padding:2rem 1.25rem}
+.post-header{margin:1rem 0 1.5rem}
+.post-title{font-size:clamp(2rem,5vw,2.75rem);line-height:1.15;font-weight:800;color:#111}
+.post-meta{color:#6b7280;font-size:.9rem;display:flex;gap:.5rem;align-items:center;margin-top:.5rem}
+.post-hero img{display:block;width:100%;height:auto;border-radius:.75rem;border:1px solid #e5e7eb;margin:1rem 0 1.5rem}
+
+/* Corps de l'article */
+.post-body{font-family: Georgia, Cambria, "Times New Roman", Times, serif; font-size:1.1rem; line-height:1.8; color:#1f2937}
+.post-body p{margin:1rem 0}
+.post-body h2{font-size:1.5rem; line-height:1.3; margin:2rem 0 .75rem; font-weight:800; color:#111}
+.post-body h3{font-size:1.25rem; margin:1.5rem 0 .5rem; font-weight:700; color:#111}
+.post-body a{color:#111; text-decoration: underline}
+.post-body ul,.post-body ol{margin:1rem 0 1rem 1.25rem}
+.post-body li{margin:.4rem 0}
+.post-body blockquote{border-left:3px solid #e5e7eb; padding-left:1rem; color:#374151; font-style:italic}
+.post-body pre{background:#0f172a; color:#e5e7eb; border-radius:.75rem; padding:1rem; overflow:auto}
+.post-body code{background:#f3f4f6; color:#111; padding:.15rem .35rem; border-radius:.35rem}
+.post-body img{border-radius:.75rem;border:1px solid #e5e7eb;max-width:100%}
+
+/* Liste des articles (/blog) */
+.blog-list{max-width:860px;margin:0 auto;padding:2rem 1.25rem}
+.blog-card{display:block;border-bottom:1px solid #e5e7eb;padding:1.25rem 0}
+.blog-card h2{font-size:1.35rem;font-weight:800;color:#111}
+.blog-card p{color:#374151;margin-top:.35rem}
+.blog-card .meta{font-size:.85rem;color:#6b7280;margin-top:.25rem}

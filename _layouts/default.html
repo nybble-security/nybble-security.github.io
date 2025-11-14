@@ -26,9 +26,12 @@
         }
     </script>
     <link rel="stylesheet" href="/assets/css/main.css">
+{% if page.collection == 'posts' or page.blog_css %}
+  <link rel="stylesheet" href="/assets/css/blog.css">
+{% endif %}
 </head>
 
-<body class="font-sans text-slate-900">
+<body class="font-sans text-slate-900{% if page.collection == 'posts' or page.blog_css %} blog{% endif %}">
     <header class="sticky top-0 z-10 backdrop-blur bg-white/75 border-b">
         <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
             <a href="/" class="font-semibold">Nybble</a>
