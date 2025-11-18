@@ -13,6 +13,15 @@
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--fg)}
 
+.site-header{position:absolute;top:0;left:0;width:100%;z-index:20;padding:1.25rem 0;color:#fff}
+.site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
+.site-logo img{height:60px;width:auto;display:block}
+.site-nav{display:none;align-items:center;gap:1.5rem;text-transform:uppercase;font-size:.85rem;letter-spacing:.2em;background:rgba(0,0,0,0.55);padding:0.75rem 1.5rem;border-radius:999px}
+.site-nav a{color:#fff;position:relative;padding-bottom:.15rem}
+.site-nav a::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:2px;background:#fff;opacity:0;transition:opacity .2s ease}
+.site-nav a:hover::after,.site-nav a:focus-visible::after{opacity:1}
+@media (min-width:768px){.site-nav{display:flex}}
+
 /* Typo générale */
 h1,h2,h3,h4{letter-spacing:-0.02em}
 h1{font-size:clamp(2.4rem,5vw,3.5rem);line-height:1.1;font-weight:700}

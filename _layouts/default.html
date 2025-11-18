@@ -32,14 +32,16 @@
 </head>
 
 <body class="font-sans text-slate-900{% if page.collection == 'posts' or page.blog_css %} blog{% endif %}">
-    <header class="sticky top-0 z-10 backdrop-blur bg-white/75 border-b">
-        <div class="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-            <a href="/" class="font-semibold">Nybble</a>
-            <nav class="hidden md:flex items-center gap-6 text-sm">
-                <a href="/" class="hover:underline">Accueil</a>
-                <a href="/blog/" class="hover:underline">Blog</a>
-                <a href="/index.html#offres" class="hover:underline">Offres</a>
-                <a href="/index.html#contact" class="hover:underline">Contact</a>
+    <header class="site-header">
+        <div class="site-header__inner mx-auto max-w-6xl px-6">
+            <a href="/" class="site-logo">
+                <img src="/assets/img/Nybble-Logo-Horizontal-Blanc_resized.svg" alt="Nybble" />
+            </a>
+            <nav class="site-nav">
+                <a href="/">Accueil</a>
+                <a href="/blog/">Blog</a>
+                <a href="/index.html#offres">Offres</a>
+                <a href="/index.html#contact">Contact</a>
             </nav>
         </div>
     </header>
