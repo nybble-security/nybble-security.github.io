@@ -1,0 +1,161 @@
+---
+layout: default
+title: "IT & Cyber Consulting — Nybble"
+---
+
+<main>
+  <!-- HERO -->
+  <section id="hero" class="hero" style="--hero: url('/assets/img/hero-banner.webp')">
+  <div class="content">
+    <div class="grid gap-10 md:grid-cols-2">
+      <div>
+        <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+          Combinez <span class="underline decoration-4">IT & Cyber</span>,
+          au lieu de les opposer.
+        </h1>
+        <p class="mt-6 text-lg max-w-prose">
+          Nous aidons les organisations à concilier excellence IT, sécurité
+          pragmatique et vitesse d'exécution. Un seul partenaire, des décisions
+          cohérentes, des risques maîtrisés.
+        </p>
+        <div class="mt-8 flex gap-3">
+          <a href="#contact" class="button">Parlez-nous de votre besoin</a>
+          <a href="#offres" class="button-outline">Nos offres</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- RÉFÉRENCES (logos horizontaux) -->
+  <section id="references" class="py-8" style="background:var(--accent)">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="logo-strip">
+        <span class="caption">Ils nous font confiance</span>
+        <!-- Remplacez les src par vos icônes monochromes/PNG/SVG -->
+        <img src="/assets/img/logos/elastic.svg" alt="Elastic"/>
+        <img src="/assets/img/logos/microsoft.svg" alt="Microsoft"/>
+        <img src="/assets/img/logos/paddle.svg" alt="Paddle"/>
+        <img src="/assets/img/logos/partner1.svg" alt="Partenaire"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRES -->
+  <section id="offres" class="section-soft py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="section-title">
+        <p class="eyebrow">Nos offres</p>
+        <h2>Offres de consulting</h2>
+        <p class="section-subtitle">Des missions ciblées pour accélérer vos décisions IT & cyber sous une même bannière.</p>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+        <div class="card-dark">
+          <h3>Stratégie IT x Cyber</h3>
+          <p>Feuille de route commune, alignement ExCo et priorisation des investissements critiques.</p>
+        </div>
+        <div class="card-dark">
+          <h3>Architecture & Cloud</h3>
+          <p>Design cible, revues de risques, sécurisation workloads/données avec trajectoire réaliste.</p>
+        </div>
+        <div class="card-dark">
+          <h3>Programme de transformation</h3>
+          <p>PMO léger, indicateurs utiles et transfert de compétences pour rendre vos équipes autonomes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROCHE -->
+  <section id="approche" class="section-soft py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="section-title">
+        <p class="eyebrow">Notre approche</p>
+        <h2>Un cadrage court, des actions concrètes</h2>
+        <p class="section-subtitle">Diagnostic ciblé → décisions partagées → livraison incrémentale, toujours avec la double lecture IT & Cyber.</p>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-4">
+        <div class="card-outline">
+          <span class="step">01</span>
+          <h3>Cadrer</h3>
+          <p>Objectifs, contraintes, risques clés pour donner une vision claire aux sponsors.</p>
+        </div>
+        <div class="card-outline">
+          <span class="step">02</span>
+          <h3>Concevoir</h3>
+          <p>Architecture cible, trajectoire et backlog priorisé, co-construit avec vos équipes.</p>
+        </div>
+        <div class="card-outline">
+          <span class="step">03</span>
+          <h3>Livrer</h3>
+          <p>Itérations courtes, mesure de valeur et arbitrages rapides pour rester utiles.</p>
+        </div>
+        <div class="card-outline">
+          <span class="step">04</span>
+          <h3>Ancrer</h3>
+          <p>Transfert, documentation essentielle et passage de relais sans friction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUI SOMMES-NOUS -->
+  <section id="team" class="section-soft py-24">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="section-title">
+        <p class="eyebrow">Qui sommes-nous ?</p>
+        <h2>Deux consultants complémentaires</h2>
+        <p class="section-subtitle">Nous associons vision IT globale et expertise cyber opérationnelle pour sécuriser vos décisions de bout en bout.</p>
+      </div>
+      <div class="mt-12 grid gap-8 md:grid-cols-2">
+        <article class="team-card">
+          <div class="avatar-slot">Photo</div>
+          <div>
+            <h3>Consultant IT</h3>
+            <p>15 ans d'architecture, modernisation applicative et pilotage de trajectoires cloud. Il sécurise la delivery tout en gardant la dette technique sous contrôle.</p>
+          </div>
+        </article>
+        <article class="team-card">
+          <div class="avatar-slot">Photo</div>
+          <div>
+            <h3>Consultant Cyber</h3>
+            <p>Ex-responsable sécurité et CERT. Il apporte gouvernance, contrôles pragmatiques et pédagogie pour embarquer vos parties prenantes.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BLOG PREVIEW -->
+  <section id="blog" class="blog-feature" style="--blog-bg: url('/assets/img/homepage-blog.webp')">
+    <div class="blog-feature__content">
+      <p class="blog-label">BLOG : LA PAUSE PRO</p>
+      {% assign latest_post = site.posts | first %}
+      {% if latest_post %}
+        <p class="blog-title">{{ latest_post.title }}</p>
+        <p class="blog-meta">{{ latest_post.date | date: "%-d %B %Y" }}</p>
+        <div class="blog-actions">
+          <a href="{{ latest_post.url }}" class="blog-link">Lire l'article</a>
+          <a href="/blog/" class="button blog-cta">Tous nos articles</a>
+        </div>
+      {% else %}
+        <p class="section-subtitle">Les premiers articles arrivent bientôt.</p>
+        <a href="/blog/" class="button blog-cta">Tous nos articles</a>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- CONTACT & CTA FUSIONNÉS -->
+  <section id="contact" class="py-20" style="background:var(--accent);color:#fff">
+    <div class="mx-auto max-w-5xl px-6 text-center">
+      <h2 class="text-2xl md:text-3xl font-semibold">Vous souhaitez être accompagnés par Nybble ?</h2>
+      <form action="https://formspree.io/f/your-id" method="POST" class="mt-10 grid gap-4 md:max-w-3xl mx-auto text-left">
+        <input class="px-4 py-3 rounded-xl text-black" type="text" name="name" placeholder="Nom" required>
+        <input class="px-4 py-3 rounded-xl text-black" type="email" name="email" placeholder="Email" required>
+        <textarea class="px-4 py-3 rounded-xl text-black" name="message" placeholder="Votre message" rows="5" required></textarea>
+        <button class="button button-inverse w-max" type="submit">Envoyer</button>
+      </form>
+      <p class="mt-8 text-sm opacity-90">Ou écrivez-nous : <a class="underline" href="mailto:contact@nybble-security.io">contact@nybble-security.io</a></p>
+    </div>
+  </section>
+</main>

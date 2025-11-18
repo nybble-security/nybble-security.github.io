@@ -1,0 +1,123 @@
+version: 1
+
+project:
+  name: nybble-site
+  description: >
+    Site Nybble basé sur Jekyll + GitHub Pages, avec une landing page sombre
+    et un blog type Medium en thème clair, séparés par CSS et layouts.
+
+assistant:
+  # Message "system" global pour guider Codex
+  system_prompt: |
+    Tu travailles sur un site statique Jekyll déployé sur GitHub Pages.
+    Ton objectif est de modifier/ajouter du code sans casser :
+    - la structure Jekyll,
+    - la séparation landing/blog,
+    - la compatibilité GitHub Pages.
+
+    Rappelle-toi en permanence :
+    1. Ne transforme pas ce projet en SPA (pas de React, Next.js, etc.).
+    2. Ne remplace pas Jekyll par un autre générateur.
+    3. Respecte la séparation stricte :
+       - Landing : thème sombre, CSS dans assets/css/main.css.
+       - Blog : thème clair type Medium, CSS dans assets/css/blog.css.
+    4. Ne change pas les chemins principaux :
+       - Landing : / (index.html)
+       - Blog : /blog/ (blog/index.html)
+       - Articles : /_posts/ (collection "posts").
+
+    Tu dois suivre les bonnes pratiques Jekyll, GitHub Pages et d’un site
+    marketing + blog simple.
+
+files:
+  include:
+    - "index.html"
+    - "blog/**"
+    - "_posts/**"
+    - "_layouts/**"
+    - "_includes/**"
+    - "_config.yml"
+    - "Gemfile"
+    - "assets/css/**"
+    - "assets/img/**"
+    - ".codex/config.yaml"
+  read_only:
+    # Fichiers à éviter de modifier sans demande explicite
+    - "Gemfile"
+    - "_config.yml"
+
+guidelines:
+  # Règles techniques Jekyll / GitHub Pages
+  jekyll:
+    - "Toujours garder la front matter YAML en tout début de fichier, délimitée par ---."
+    - "Ne pas supprimer ni casser la collection 'posts' (dossier _posts/)."
+    - "Respecter le pattern de fichiers d’articles : YYYY-MM-DD-nom-de-l-article.md."
+    - "Ne pas changer radicalement 'permalink' dans _config.yml sans raison explicite."
+    - "Utiliser les layouts existants : 'default' et 'post' ; éviter d’en créer de nouveaux sauf besoin clair."
+    - "Préserver l’intégration de 'jekyll-seo-tag', 'jekyll-sitemap' et 'jekyll-feed' si présents."
+    - "Ne pas introduire de plugins non supportés par GitHub Pages, sauf si une configuration GitHub Actions spécifique est demandée."
+
+  layouts:
+    - "default.html est le layout principal. Il doit inclure main.css, gérer le header/footer, et injecter blog.css uniquement pour le blog."
+    - "post.html doit toujours hériter de default.html via 'layout: default'."
+    - "Le contenu d’un article doit être enveloppé dans un élément .post centré (par exemple <article class=\"post\">)."
+    - "Le calcul du temps de lecture dans post.html doit rester simple (chars/1200) sans dépendre de plugins Ruby externes."
+    - "Toute nouvelle page d’article doit utiliser 'layout: post' dans sa front matter ou bénéficier du 'defaults' dans _config.yml."
+
+  css:
+    - "Ne pas mélanger les styles landing et blog dans un seul fichier CSS."
+    - "assets/css/main.css sert à la landing et au thème sombre (hero, dégradés, CTA, logos)."
+    - "assets/css/blog.css sert uniquement au blog (fond blanc, colonne 720px, typo serif, style Medium)."
+    - "Ne pas déplacer ni renommer main.css ou blog.css sans ajuster les <link> correspondants dans default.html."
+    - "Garder le blog lisible : large interlignage, marges verticales suffisantes, largeur max ~720px, texte noir sur fond blanc."
+    - "Limiter le JavaScript aux besoins strictement nécessaires (petites interactions, pas de frameworks lourds)."
+
+  routing:
+    - "Ne pas changer l’URL de la landing : index.html à la racine → '/'."
+    - "Ne pas changer l’URL du blog : blog/index.html → '/blog/'."
+    - "Les articles doivent continuer à être servis à partir de la collection 'posts' avec le permalink configuré dans _config.yml."
+
+  seo:
+    - "Laisser Jekyll SEO Tag gérer les balises <title>, <meta> principales, Open Graph et Twitter Cards."
+    - "Ne pas dupliquer les <title> ou meta description manuellement si {% seo %} est présent."
+    - "Conserver la génération du sitemap (jekyll-sitemap) et du feed (jekyll-feed) si utilisés."
+    - "S’assurer que les liens internes utilisent les URLs Jekyll ({{ site.url }}, {{ post.url }}, etc.) pour éviter les chemins cassés."
+
+  content:
+    - "Pour un nouvel article, toujours inclure au minimum : title, date, éventuellement author et image."
+    - "Utiliser des H2/H3 structurés dans les articles, pas seulement des paragraphes en gras."
+    - "Préférer le Markdown simple pour le contenu (listes, code, citations), sans HTML inutile."
+
+  github_pages:
+    - "Assumer que le site est construit dans l’environnement GitHub Pages standard."
+    - "Ne pas compter sur des plugins Ruby non whitelistes par GitHub Pages sans configuration explicite de GitHub Actions."
+    - "Éviter les dépendances Node lourdes ; ce projet reste un site statique simple."
+
+  safety:
+    - "Avant de supprimer ou renommer un fichier clé (index.html, blog/index.html, _layouts/default.html, _layouts/post.html), vérifier s’il est référencé ailleurs."
+    - "Toujours garder un HTML valide (doctype, <html>, <head>, <body>)."
+    - "Ne jamais supprimer de front matter existante sans la remplacer par un équivalent fonctionnel."
+
+workflows:
+  - name: dev-local
+    description: "Instructions pour lancer le site en local"
+    steps:
+      - "bundle install"
+      - "bundle exec jekyll serve --livereload"
+      - "Visiter http://127.0.0.1:4000"
+
+  - name: add-blog-post
+    description: "Créer un nouvel article de blog"
+    steps:
+      - "Créer un fichier dans _posts/ avec le pattern YYYY-MM-DD-titre-en-kebab-case.md"
+      - "Ajouter la front matter minimale : title, date, author (optionnel), image (optionnel)."
+      - "Écrire le contenu en Markdown, en utilisant H2/H3 pour la structure."
+      - "Vérifier le rendu localement (layout post, style Medium, fond blanc, texte centré)."
+
+  - name: edit-landing
+    description: "Modifier la landing sans casser le blog"
+    steps:
+      - "Modifier uniquement index.html et assets/css/main.css."
+      - "Ne pas toucher à assets/css/blog.css pour des changements qui concernent uniquement la landing."
+      - "Vérifier que /blog et un article /YYYY/MM/DD/slug continuent d’afficher le thème clair."
+

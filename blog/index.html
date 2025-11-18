@@ -1,0 +1,21 @@
+---
+layout: default
+title: "Blog"
+permalink: /blog/
+blog_css: true
+---
+
+<section style="background:#fff;color:#111">
+  <div class="blog-list">
+    <h1 style="margin-bottom:1rem;color:#111">Blog</h1>
+    <div>
+      {% for post in site.posts %}
+        <a href="{{ post.url }}" class="blog-card">
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+          <div class="meta">{{ post.date | date: "%-d %B %Y" }}</div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
