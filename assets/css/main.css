@@ -64,6 +64,8 @@ a:hover{opacity:.9}
 .button{display:inline-block;padding:.75rem 1.25rem;border-radius:0.75rem;background:var(--accent);color:#fff;font-weight:600}
 .button:hover{opacity:.95}
 .button-outline{display:inline-block;padding:.75rem 1.25rem;border-radius:0.75rem;border:1px solid var(--line-light);color:#fff}
+.button-inverse{background:#fff;color:var(--accent);font-weight:600}
+.button-inverse:hover{opacity:.95;color:var(--accent)}
 
 /* Cartes */
 .card{border:1px solid var(--line);border-radius:1rem;padding:1.25rem;background:rgba(255,255,255,0.02)}
