@@ -11,7 +11,8 @@
   --accent: #9a3400;       /* orange cuivre (CTA / barres) */
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--fg)}
+body{background:#fff;color:var(--fg)}
+.page-frame{max-width:1440px;margin:0 auto;min-height:100vh;background:var(--bg);position:relative;box-shadow:0 0 40px rgba(0,0,0,0.35)}
 
 .site-header{position:absolute;top:0;left:0;width:100%;z-index:20;padding:1.25rem 0;color:#fff}
 .site-header__inner{display:flex;align-items:center;justify-content:space-between;gap:1.5rem}
