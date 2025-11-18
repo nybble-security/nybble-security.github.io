@@ -88,9 +88,9 @@ a:hover{opacity:.9}
 .hero h1{color:#fff}
 
 /* Bande de logos horizontale */
-.logo-strip{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;opacity:.95}
-.logo-strip img{height:28px;filter:grayscale(0);opacity:.9}
-.logo-strip .caption{font-size:.9rem;color:#fff;margin-right:1rem;opacity:.85}
+
+.logo-row{margin-top:1.5rem;display:flex;justify-content:center;gap:2rem;flex-wrap:wrap}
+.logo-row img{height:48px;color: white;opacity:.9}
 
 /* Blog "prose" minimaliste sans plugin */
 .richtext{font-size:1.05rem;line-height:1.7;color:#fff}
