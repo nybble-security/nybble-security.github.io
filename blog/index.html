@@ -5,15 +5,25 @@ permalink: /blog/
 blog_css: true
 ---
 
-<section style="background:#fff;color:#111">
+<section class="hero blog-hero" style="--hero: url('/assets/img/homepage-blog.webp')">
+  <div class="content">
+    <div class="max-w-3xl">
+      <p class="eyebrow">Blog — La pause pro</p>
+      <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-white">Combinez IT, sécurité et delivery</h1>
+      <p class="mt-5 text-lg max-w-2xl text-slate-100">Nos retours terrain pour aligner architecture, risques et vitesse d'exécution sans opposer les équipes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="blog-listing">
   <div class="blog-list">
-    <h1 style="margin-bottom:1rem;color:#111">Blog</h1>
+    <h2 class="blog-list__title">Nos derniers articles</h2>
     <div>
       {% for post in site.posts %}
         <a href="{{ post.url }}" class="blog-card">
           <h2>{{ post.title }}</h2>
           <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
-          <div class="meta">{{ post.date | date: "%-d %B %Y" }}</div>
+          <div class="meta">{% include date-fr.html date=post.date %}</div>
         </a>
       {% endfor %}
     </div>

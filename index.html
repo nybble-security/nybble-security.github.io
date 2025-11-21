@@ -135,7 +135,7 @@ title: "IT & Cyber Consulting — Nybble"
       {% assign latest_post = site.posts | first %}
       {% if latest_post %}
         <p class="blog-title">{{ latest_post.title }}</p>
-        <p class="blog-meta">{{ latest_post.date | date: "%-d %B %Y" }}</p>
+        <p class="blog-meta">{% include date-fr.html date=latest_post.date %}</p>
         <div class="blog-actions">
           <a href="{{ latest_post.url }}" class="blog-link">Lire l'article</a>
           <a href="/blog/" class="button blog-cta">Tous nos articles</a>

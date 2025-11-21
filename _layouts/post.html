@@ -6,22 +6,24 @@ layout: default
 {% assign mins = chars | divided_by: 1200 %}
 {% if mins < 1 %}{% assign mins = 1 %}{% endif %}
 
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <div class="post-meta">
-      <span>{{ page.date | date: "%d %b %Y" }}</span>
-      <span>•</span>
-      <span>{{ mins }} min de lecture</span>
-      {% if page.author %}<span>• {{ page.author }}</span>{% endif %}
-    </div>
-    {% if page.image %}
-      <figure class="post-hero">
-        <img src="{{ page.image }}" alt="">
-      </figure>
-    {% endif %}
-  </header>
+{% assign hero_image = page.image | default: '/assets/img/homepage-blog.webp' %}
 
+<section class="hero blog-hero" style="--hero: url('{{ hero_image }}')">
+  <div class="content">
+    <div class="max-w-3xl">
+      <p class="eyebrow">Blog — La pause pro</p>
+      <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-white">{{ page.title }}</h1>
+      <div class="post-meta hero-meta">
+        <span>{% include date-fr.html date=page.date %}</span>
+        <span>•</span>
+        <span>{{ mins }} min de lecture</span>
+        {% if page.author %}<span>• {{ page.author }}</span>{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<article class="post">
   <div class="post-body">
     {{ content }}
   </div>
