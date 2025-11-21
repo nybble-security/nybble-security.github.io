@@ -18,12 +18,12 @@ footer{background:#fff;border-top:1px solid #e5e7eb}
 .post{max-width:840px;margin:-3rem auto 0;background:#fff;padding:3rem 1.75rem;border-radius:28px;box-shadow:0 -10px 35px rgba(0,0,0,0.1)}
 .post-header{margin:1rem 0 1.5rem}
 .post-title{font-size:clamp(2rem,5vw,2.75rem);line-height:1.15;font-weight:800;color:#111}
-.post-meta{color:#6b7280;font-size:.9rem;display:flex;gap:.5rem;align-items:center;margin-top:.5rem}
+.post-meta{color:#8a8b8d;text-shadow: 1px 1px black;font-size:.9rem;display:flex;gap:.5rem;align-items:center;margin-top:.5rem}
 .post-hero img{display:block;width:100%;height:auto;border-radius:.75rem;border:1px solid #e5e7eb;margin:1rem 0 1.5rem}
 
 /* Corps de l'article */
 .post-body{font-family: Georgia, Cambria, "Times New Roman", Times, serif; font-size:1.1rem; line-height:1.8; color:#1f2937}
-.post-body p{margin:1rem 0}
+.post-body p{margin:1rem 0; color:#242424}
 .post-body h2{font-size:1.5rem; line-height:1.3; margin:2rem 0 .75rem; font-weight:800; color:#111}
 .post-body h3{font-size:1.25rem; margin:1.5rem 0 .5rem; font-weight:700; color:#111}
 .post-body a{color:#111; text-decoration: underline}
