@@ -6,7 +6,7 @@ layout: default
 {% assign mins = chars | divided_by: 1200 %}
 {% if mins < 1 %}{% assign mins = 1 %}{% endif %}
 
-{% assign hero_image = page.image | default: '/assets/img/blog-hero.png' %}
+{% assign hero_image = page.image | default: '/assets/img/homepage-blog.webp' %}
 
 <section class="hero blog-hero" style="--hero: url('{{ hero_image }}')">
   <div class="content">
