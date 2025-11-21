@@ -14,7 +14,7 @@ layout: default
       <p class="eyebrow">Blog — La pause pro</p>
       <h1 class="text-4xl md:text-5xl font-semibold leading-tight text-white">{{ page.title }}</h1>
       <div class="post-meta hero-meta">
-        <span>{{ page.date | date: "%-d %B %Y" }}</span>
+        <span>{% include date-fr.html date=page.date %}</span>
         <span>•</span>
         <span>{{ mins }} min de lecture</span>
         {% if page.author %}<span>• {{ page.author }}</span>{% endif %}

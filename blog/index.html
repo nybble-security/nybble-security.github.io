@@ -23,7 +23,7 @@ blog_css: true
         <a href="{{ post.url }}" class="blog-card">
           <h2>{{ post.title }}</h2>
           <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
-          <div class="meta">{{ post.date | date: "%-d %B %Y" }}</div>
+          <div class="meta">{% include date-fr.html date=post.date %}</div>
         </a>
       {% endfor %}
     </div>
