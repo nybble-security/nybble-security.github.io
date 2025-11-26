@@ -59,6 +59,7 @@ section{scroll-margin-top:6rem}
   .hero-actions{flex-direction:column}
   .hero-actions .button,
   .hero-actions .button-outline{width:100%;text-align:center}
+  #hero .content{padding-top:8rem}
 }
 
 .blog-feature{position:relative;min-height:38rem;background:linear-gradient(90deg,rgba(5,15,25,0.7) 0%,rgba(5,15,25,0.5) 45%,rgba(5,15,25,0.2) 70%,rgba(5,15,25,0.05) 100%),var(--blog-bg) center/cover no-repeat;display:flex;align-items:center;padding:4rem min(6vw,5rem);margin-top:-1px}
