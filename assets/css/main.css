@@ -52,6 +52,14 @@ section{scroll-margin-top:6rem}
 .team-card p{color:var(--muted)}
 .team-avatar{width:120px;height:150px;border-radius:1rem;object-fit:cover;border:2px solid rgba(255,255,255,0.35);box-shadow:0 12px 30px rgba(0,0,0,0.25);flex-shrink:0}
 .avatar-slot{width:96px;height:96px;border-radius:999px;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;text-transform:uppercase;font-size:.7rem;letter-spacing:.3em;color:rgba(255,255,255,0.7);border:1px dashed rgba(255,255,255,0.4)}
+@media (max-width:768px){
+  .team-card{flex-direction:column;align-items:flex-start}
+  .team-card .team-avatar{width:100%;max-width:320px;height:auto}
+  #contact form button.button{width:100%}
+  .hero-actions{flex-direction:column}
+  .hero-actions .button,
+  .hero-actions .button-outline{width:100%;text-align:center}
+}
 
 .blog-feature{position:relative;min-height:38rem;background:linear-gradient(90deg,rgba(5,15,25,0.7) 0%,rgba(5,15,25,0.5) 45%,rgba(5,15,25,0.2) 70%,rgba(5,15,25,0.05) 100%),var(--blog-bg) center/cover no-repeat;display:flex;align-items:center;padding:4rem min(6vw,5rem);margin-top:-1px}
 .blog-feature__content{background:rgba(6,14,22,0.55);backdrop-filter:blur(10px);padding:2.5rem 3rem;border-radius:2rem;max-width:34rem;color:#fff;box-shadow:0 30px 60px rgba(0,0,0,0.3)}
