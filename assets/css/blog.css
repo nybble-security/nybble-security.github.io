@@ -4,6 +4,7 @@
 body.blog{background:#ffffff;color:#111}
 header.backdrop-blur{background:#ffffffcc;border-bottom:1px solid #e5e7eb}
 footer{background:#fff;border-top:1px solid #e5e7eb}
+body.blog footer p{color:inherit}
 
 .blog-hero{position:relative;overflow:hidden}
 .blog-hero .content{padding-top:7rem;padding-bottom:5rem}

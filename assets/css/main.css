@@ -109,6 +109,7 @@ a:hover{opacity:.9}
 /* Header translucide + footer */
 header.backdrop-blur{backdrop-filter:saturate(180%) blur(12px)}
 footer{background:var(--bg-soft)}
+body:not(.blog) footer a{color:var(--muted)}
 
 /* Utilitaires rapides */
 .mx-auto{margin-left:auto;margin-right:auto}
