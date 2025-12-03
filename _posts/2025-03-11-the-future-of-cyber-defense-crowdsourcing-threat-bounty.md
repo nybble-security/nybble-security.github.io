@@ -7,17 +7,17 @@ tags: [security, threat-hunting, crowdsourcing]
 image: "/assets/img/blog/threat-bounty-hero.webp"
 ---
 
-While SOC teams are overwhelmed by security alerts, unable to keep pace, maintain tools and improve detection capabilities, the bounty model enables them to benefit from a community of thousands of talented cyber analysts from all over the world, to finally operate at full capacity.
+While SOC teams are **overwhelmed by security alerts**, unable to keep pace, maintain tools and improve detection capabilities, the bounty model enables them to benefit from a **community of thousands of talented cyber analysts** from all over the world, to finally operate at full capacity.
 
 L2 and L3 analysts who were forced to do the triage work can refocus on their high-value-added tasks, improving detection capabilities, investigations and incident response.
 
-Defensive crowdsourcing reimagines bug bounty principles by engaging cybersecurity analysts to proactively hunt for threats, validate alerts, and develop detection rules.
+Defensive crowdsourcing reimagines bug bounty principles by engaging cybersecurity analysts to **proactively** hunt for threats, validate alerts, and develop detection rules.
 
-Threat Bounty offers the same advantages as Bug Bounty, and provides a simple, fast and flexible response to the many challenges facing security teams.
+Threat Bounty offers the same advantages as Bug Bounty, and provides a **simple, fast** and **flexible** response to the many challenges facing security teams.
 
 ## Benefits #1: Threat Bounty campaigns are for all companies
 
-Threat Bounty campaigns can be defined to restricted or wide perimeter, meeting the needs and resources of all type of companies, from startup to corporate.
+**Threat Bounty** campaigns can be defined to restricted or wide perimeter, meeting the needs and resources of all type of companies, from startup to corporate.
 
 Whether it’s to triage alerts from a particular scope, the whole SIEM or to hunt down the latest infostealer, it’s possible to address companies having only EDR as first line of defense or the ones with the most mature SOC with the full panoply of cybersecurity tools and processes.
 
@@ -33,11 +33,11 @@ By contrast, create an internal SOC team, able to work on different shift for 24
 
 Similar to Bug Bounty where we can find rewards going from six-figure amount (but rare) by GAFAM to few dozens of dollars for the less critical vulnerabilities, the rewards for threats and alerts can cover a wide range of amounts and therefore be adapted to all budgets.
 
-A Hunter can be rewarded €400 for a report on the discovery of an infostealer, which is much less than the impact of an attack that will be carried out thanks to the credentials collected by this infostealer. Even for small businesses, it’s money well spent.
+A Hunter can be **rewarded €400** for a report on the discovery of an infostealer, which is much less than the impact of an attack that will be carried out thanks to the credentials collected by this infostealer. Even for small businesses, it’s money well spent.
 
-Bug bounty program can lead to substantial long-term cost savings because the cost of addressing a security breach far exceeds the cost of a $20,000 (Which is the higher-end reward) bounty payout: Per the Cost of a Data Breach Report 2023, the average total cost of a data breach is well over $4 million. (Why Bug Bounty Payouts Are Worth Far More Than Their Cost)
+Bug bounty program can lead to substantial long-term cost savings because the cost of addressing a security breach far exceeds the cost of a $20,000 (Which is the higher-end reward) bounty payout: Per the Cost of a Data Breach Report 2023, the average total cost of a data breach is well over $4 million. ([Why Bug Bounty Payouts Are Worth Far More Than Their Cost](https://www.bugcrowd.com/blog/why-bug-bounty-payouts-are-worth-far-more-than-their-cost/))
 
-This model also enables transparent billing: the community has handled 113 alerts for you? You pay for 113 alerts. A hunter has found the beginnings of a compromise that could lead to the execution of ransomware, you pay a bounty and get a precise report to respond to the incident and improve your detection capabilities.
+This model also enables transparent billing: the **community has handled 113 alerts** for you? **You pay for 113 alerts**. A hunter has found the beginnings of a compromise that could lead to the execution of ransomware, you pay a bounty and get a precise report to respond to the incident and improve your detection capabilities.
 
 ## Benefits #3: A model designed to build trustworthy community
 
@@ -45,7 +45,7 @@ At first sight, it may seem scary to give access to your SIEM to an external com
 
 In reality, this is already what MSP/MSSP/MDR or internal SOC are doing when they outsource part of their alert processing to foreign IT services or other companies. You don’t even know the identity of analysts, but the IT services company acts as a trusted tier.
 
-Then as Bug Bounty platform or any other IT services company, analyst registration goes through a KYC and KYB process, so their ID and background are checked. There is also a Dojo platform in order to simulate enterprise data and alerts, so we can test analyst skills and be sure he will handle alerts in the right way.
+Then as Bug Bounty platform or any other IT services company, analyst registration goes through a **KYC and KYB process**, so their ID and background are checked. There is also a Dojo platform in order to simulate enterprise data and alerts, so we can **test analyst skills** and be sure he will handle alerts in the right way.
 
 In addition, there are of course the usual legal documents, NDAs, code of conduct, general conditions of use, terms of service, etc.
 
@@ -57,7 +57,7 @@ As analysts and hunters are ranked, we are able to create pool from the communit
 
 This is what the biggest US Bug Bounty platform is providing with HackerOne Clear.
 
-On average, our Clear hackers have been active on the platform 25+ months, and submit 24x more high and critical reports and 205x more valid high and critical reports than non-Clear hackers.(HackerOne Clear)(HackerOne ID & H1Clear verification)
+On average, our Clear hackers have been active on the platform 25+ months, and submit 24x more high and critical reports and 205x more valid high and critical reports than non-Clear hackers.([HackerOne Clear](https://www.hackerone.com/resources/i/1512872-hackerone-clear-datasheet/0?))([HackerOne ID & H1Clear verification](https://www.hackerone.com/sites/default/files/2025-02/HackerOne-IdVerificationReqs.pdf))
 
 Finally, on all modern SIEM/XDR platform, it’s possible to hide or pseudonymize fields like username, or other sensible information. Technical solutions are also here to help.
 
@@ -65,9 +65,9 @@ Finally, on all modern SIEM/XDR platform, it’s possible to hide or pseudonymiz
 
 SOC teams are completely overwhelmed by the number of alerts they are getting, and they have to handle. The idea behind Threat Bounty is not to add another tool to configure, maintain and exploit but on the contrary to relieve analysts by providing the missing human resources.
 
-62% of the alerts received by the SOC team are ignored. We keep hearing about the problem of alert fatigue. (MSSP Market News)
+62% of the alerts received by the SOC team are ignored. We keep hearing about the problem of alert fatigue. ([MSSP Market News](https://www.msspalert.com/news/mssp-market-news-survey-shows-62-of-soc-alerts-are-ignored))
 
-This way, the internal SOC team has more time to finetune detection rules, to make them more precise, avoid false positive, so get more time to work on high value-added tasks like new rules creation, deep investigation or hunting.
+This way, the internal SOC team has **more time to finetune detection rules**, to make them more precise, **avoid false positive**, so get more time to **work on high value-added tasks** like new rules creation, deep investigation or hunting.
 
 ## Benefits #5: Enhance your maturity level
 
