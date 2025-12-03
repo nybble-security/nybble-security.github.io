@@ -33,7 +33,7 @@ body.blog footer p{color:inherit}
 .post-body blockquote{border-left:3px solid #e5e7eb; padding-left:1rem; color:#374151; font-style:italic}
 .post-body pre{background:#0f172a; color:#e5e7eb; border-radius:.75rem; padding:1rem; overflow:auto}
 .post-body code{background:#f3f4f6; color:#111; padding:.15rem .35rem; border-radius:.35rem}
-.post-body img{border-radius:.75rem;border:1px solid #e5e7eb;max-width:100%}
+.post-body img{border-radius:.75rem;border:1px solid #e5e7eb;max-width:100%;margin: 0 auto}
 
 /* Liste des articles (/blog) */
 .blog-list{max-width:860px;margin:0 auto;padding:2rem 1.25rem}
