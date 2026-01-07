@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
-    <meta name="description" content="{{ page.description | default: site.description }}">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
     <link rel="icon" href="/favicon.ico">
     {% seo %}
     <!-- Tailwind (CDN pour simplicité) -->
@@ -56,9 +55,9 @@
             <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <p>© {{ "now" | date: "%Y" }} Nybble — IT & Cyber Consulting</p>
                 <div class="flex items-center gap-4">
-                    <a href="/" class="hover:underline">Mentions</a>
+                    <a href="/mentions-legales/" class="hover:underline">Mentions</a>
                     <a href="/blog/" class="hover:underline">Blog</a>
-                    <a href="mailto:contact@nybble-security.io" class="hover:underline">contact@nybble-security.io</a>
+                    <a href="mailto:contact@nybble.bzh" class="hover:underline">contact@nybble.bzh</a>
                 </div>
             </div>
         </div>

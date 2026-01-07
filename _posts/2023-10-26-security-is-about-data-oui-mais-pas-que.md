@@ -7,89 +7,104 @@ tags: [siem, data, detection, soc]
 image: "/assets/img/blog/security-data-hero.webp"
 ---
 
-L’article « Security is about data » de Ross Haleliuk aborde le sujet des Modern SIEM, de l’architecture data et explique en quoi la data joue un rôle essentiel dans la détection des menaces et attaques. Il ne faut pas oublier l’autre pilier de la sécurité : l’humain. Pour compléter les propos de Ross, je veux apporter ma vision de la place de la data dans la sécurité. Ce sont des points de vue issus du terrain.
+L’article « [Security is about data](https://ventureinsecurity.net/p/security-is-about-data-how-different) » de Ross Haleliuk aborde le sujet des Modern SIEM, de l’architecture technique et des nouveaux types d’organisation pour tirer le maximum de profit de cet outil. Il a été largement partagé par communauté cyber mais n’aborde que très rapidement les sujets de la mise en forme de la donnée et l’utilisation de celle-ci par des humains (Analystes SOC & Forensic, équipes techniques, responsable compliance, …). C’est justement sur ces sujets que nous sommes experts chez Nybble et sur lesquels nous allons apporter plus de précision avec cet article de blog, en rebondissant sur celui de Ross.
 
-Les recommandations et constatations qui suivent sont le résultat d’une dizaine d’années à travailler dans le domaine de la détection et réponse à incidents, à la fois du côté éditeur de solution SIEM, SOC interne ou MSSP.
+Les recommandations et constatations qui suivent sont le résultat d’une dizaine d’années à travailler au sein de différents SOC et équipes de sécurité. Ils peuvent refléter un avis personnel et il se peut également que certains outils ou certaines méthodes de travail échappent à notre connaissance. C’est pourquoi nous serons très heureux de débattre de tous ces sujets et apprendre avec vous !
 
 ## Pas n'importe quelle data
 
-Selon Ross, toute donnée est bonne à prendre (Security, Finance, Marketing, …) et à stocker dans le Data Lake, car elle peut être utile pour la détection. En partie vrai. Il faut néanmoins s’assurer que ces données répondent à un besoin précis et ne viennent pas rajouter de faux positifs en cas de recherche ou de hunting.
+Selon Ross, toute donnée est bonne à prendre (Security, Finance, Marketing, …) et à stocker dans le même Data Lake. De cette façon elles sont utilisables par différents outils qui n’ont plus qu’à venir se brancher sur le Data Lake. Dans la vraie vie, si on veut mettre en place et gérer efficacement les différents scénarios de détection d’un SIEM, il ne suffit pas de remplir un Data Lake d’évènements bruts et laisser la machine faire. Plusieurs étapes plus ou moins complexes sont obligatoires avant que le SIEM puisse réellement apporter de la valeur !
 
 ## Pas de normalisation, pas de détection. Pas de détection, pas d'alerte. Pas d'alerte... pas d'alerte
 
-La première étape consiste à normaliser les évènements de sécurité vers un même format, schéma. Les schémas fréquemment utilisés aujourd’hui sont : CEF (Common Event Format), ECS (Elastic Common schema), OSSEM (Open source Security Events Metadata), GraphQL. Le format dépend des capacités de l’outil SIEM et du SOC. L’objectif est de rendre immédiatement exploitables les logs collectés, et donc économiser du temps pour passer rapidement aux tâches d’analyse et d’investigation.
+![mission-cleopatre-bisou](/assets/img/blog/2023-10-26-security-is-about-data-oui-mais-pas-que/asterix-et-obelix-mission-cleopatre-gif-bisou.gif)
 
-La solution est alors de normaliser les logs pour permettre au SIEM de déclencher des alertes et ensuite pour permettre à l’analyste de comprendre immédiatement l’alerte. Par exemple, un certain nombre d’informations sont indispensables pour un SOC : source_ip, destination_ip, user, outcome, event_id, event_type, source/destination_process, destination_url.
+La première étape consiste à normaliser les évènements de sécurité vers un même format, schéma. Les vendeurs de produits ou services (Firewall, Proxy, EDR, Application SaaS, …) ont, pour la plupart, des capacités de logging qui génèrent des évènements avec l’utilisation des solutions et notamment des évènements lié à la sécurité (Authentification, blocage d’accès, gestion des permissions, lancement de processus, accès web, …). Sur ce point chaque vendeur travaille de son côté dans son propre écosystème, sans se soucier des personnes et outils qui auront la nécessité d’utiliser cette donnée. Le résultat est que des dizaines de formats de logs existent, que rien n’est rationalisé (parfois même au sein d’une solution d’un vendeur) et que sans pré-traitement ces données sont inutilisables.
 
-Le choix du schéma (qui est d’ailleurs parfois imposé selon l’éditeur du SIEM) constitue en lui même une possible contrainte, quand d’autres champs peuvent être utiles à la détection d’une menace spécifique par exemple.
+La solution est alors de normaliser les logs pour permettre au SIEM de déclencher des alertes et ensuite aider l’analyste sécurité à investiguer facilement, efficacement et rapidement en cas d’incident. Ce travail minutieux doit être fait pour chacune des sources de logs, avec dans le temps des ajustements à réaliser pour répondre aux besoins des analystes SOC et aux évolutions du schéma choisi.
 
-La normalisation constitue donc la base d’un SIEM efficace. Elle doit être mûrement réfléchie en début de projet afin de ne pas devoir être modifiée par la suite. Elle doit être conçue par les équipes SOC / Incident Response, par des CyberAnalysts connaissant la data avec laquelle ils vont travailler.
+Le choix du schéma (qui est d’ailleurs parfois imposé selon l’éditeur du SIEM) constitue en lui même un point d’attention particulier. Il doit être évolutif, personnalisable, compréhensible et surtout être utilisé par une communauté suffisamment importante afin qu’il soit implémenté sur les solutions tierces qui s’interfacent avec le SIEM. Comme pour les formats de log, chaque éditeur de SIEM dispose de son propre schéma (CEF, LEEF, ECS, …) qui convient à son écosystème.
+
+La normalisation constitue donc la base d’un SIEM efficace. Elle doit être mûrement réfléchie en début de projet car les implications sont nombreuses et la correction a posteriori est difficile.
 
 ## Enrichissement : analyste sans contexte, investigation complexe
 
-Après le parsing et la normalisation, vient l’enrichissement. Cette étape vise à ajouter le maximum de contexte aux données. C’est ce contexte qui est ensuite utilisé par les règles de détection et l’analyste SOC / Incident Response lors de l’investigation.
+![subrote-hackers](/assets/img/blog/2023-10-26-security-is-about-data-oui-mais-pas-que/subrote-hackers.gif)
 
-L’enrichissement doit absolument être réalisé avant le stockage des logs et le processing par le moteur de corrélation. Ce n’est pas uniquement pour des raisons de temps d’intervention sur un incident ou d’optimisation, mais aussi pour ne pas perdre des logs importants pour lesquels le contexte n’était pas disponible au moment du parsing.
+Après le parsing et la normalisation, vient l’enrichissement. Cette étape vise à ajouter le maximum de contexte à un log en fonction des informations de base qu’il contient.
 
-L’enrichissement peut se faire à partir de sources de données internes ou externes (elles peuvent être gratuites, payantes, des feeds, du machine learning, des données stockées…). Voici quelques exemples :
+L’enrichissement doit absolument être réalisé avant le stockage des logs et le processing par le moteur de règles/corrélation du SIEM. Pourquoi ? Car cela représente une énorme opportunité pour améliorer ses capacités de détection d’un côté et réduire le nombre de faux-positifs de l’autre.
 
-Interne : CMDB, LDAP Query, DHCP Lease, DNS PTR Record, Company site list, …
+L’enrichissement peut se faire à partir de sources de données internes ou externes (elles peuvent être stockées dans le Data Lake pour réutilisation et mise à jour). Une liste non exhaustive :
 
-Externe : Onyphe, Virus Total, Threat Intel feeds, DNS Lookup, Alexa Top 1000, …
+<ins>Interne :</ins> CMDB, LDAP Query, DHCP Lease, DNS PTR Record, Company site list, …
 
-Grâce à l’enrichissement un analyste sera capable d’analyser et de comprendre plus rapidement la raison de l’alerte, il se concentre sur ce qui compte pour sa stratégie de hunt, et son investigation.
+<ins>Externe :</ins> Onyphe, Virus Total, Threat Intel feeds, DNS Lookup, Alexa Top 1000, …
+
+Grâce à l’enrichissement un analyste sera capable d’analyser et de comprendre plus rapidement la raison de déclenchement d’une alerte. Lors du tri et de la catégorisation il sera en mesure de prendre plus sereinement une décision sur la légitimité de celle-ci. Dernier avantage et pas des moindres, on lui évite de faire des allers retours sur plusieurs plateformes afin d’obtenir ces informations à la main et on réduit ainsi l’alerte fatigue.
 
 ## Filtrage à la Sven Marquardt
 
-Il est fréquent d’être confronté au raisonnement suivant : “J’active tous les logs en debug, comme ça je suis sûr de pouvoir détecter”, ou “je loggue toutes les requêtes web pour quelques微secondes tiens ? Je les garde dans mon SIEM”. Cela peut paraitre légitime mais conduit le plus souvent à l’effet inverse pour plusieurs raisons :
+![ziekenhuisbal-steward](/assets/img/blog/2023-10-26-security-is-about-data-oui-mais-pas-que/ziekenhuisbal-steward.gif)
 
-- Utilisation excessive des ressources du SIEM. Le CPU et la mémoire vont être utilisés pour parser, normaliser, enrichir des logs qui ne seront pas utilisés par la suite. Cela va entrainer une réduction des performances du SIEM.
-- Augmentation du budget SIEM. Cela amène à devoir faire des arbitrages contre-productifs lorsqu’il faut choisir des logs à collecter, à cause du coût d’indexation pour le stockage.
-- Pollution du Data Lake. L’analyste aura sans doute à filtrer plus d’éléments indésirables lors de ses investigations ou campagnes de hunting.
+Il est fréquent d’être confronté au raisonnement suivant : “J’active tous les logs en debug, comme ça je suis sur de ne rien louper et d’avoir toutes les informations en cas d’investigation ! 👍🏼”.
 
-L’idée est d’être le plus restrictif possible en vérifiant à l’avance quels logs sont nécessaires avant d’envisager leur collecte, tout en gardant une marge de manœuvre pour les besoins futurs et imprévus.
+Cela peut paraitre légitime mais conduit le plus souvent à l’effet inverse pour plusieurs raisons :
 
-Il est possible de s’appuyer sur des matrices qui référencent les types de logs nécessaires par tactiques et techniques du framework MITRE ATT&CK afin de ne collecter uniquement que le minimum nécessaire.
+- Utilisation excessive des ressources du SIEM. Le CPU et la mémoire vont être utilisés pour parser, normaliser et enrichir des logs inutiles, affectant le run des règles de détection qui va subir des timeouts.
+- Augmentation du budget SIEM. Cela amène à devoir faire des arbitrages contre-productifs lorsqu’il faut ajouter de nouvelles sources de log qui pourraient être utiles.
+- Pollution du Data Lake. L’analyste aura sans doute à filtrer plus d’éléments indésirables lors de ses investigations, ce qui aurait pu être fait en amont et sans gâcher de ressources (CPU, Mémoire, Disque).
 
-Astuce security “Used-case” offerte :
+L’idée est d’être le plus restrictif possible en vérifiant à l’avance quels logs sont nécessaires avant même de mettre en place une nouvelle règle de détection et de les activer à la demande. En réalité dans la majorité des cas il sera possible de filtrer les logs indésirables dès leur arrivée sur le collecteur.
 
-Cryptominer detection with CPU usage monitoring, à réaliser avec des métriques (si elles arrivent déjà dans votre SIEM) ou à travers des logs issus de scripts d’export et du déploiement d’agents.
+Il est possible de s’appuyer sur des matrices qui référencent les types de logs nécessaires par tactique et technique MITRE ATT&CK ([Exemple avec les EventID Windows](https://github.com/mdecrevoisier/EVTX-to-MITRE-Attack)).
+
+<ins>Astuce security “Used-case” offerte :</ins>
+
+Cryptominer detection with CPU usage monitoring, à réaliser avec des métriques (si elles arrivent déjà dans votre SIEM) ! 👍🏼
 
 ## Security is about human
 
-Maintenant que les données sont correctement formatées, stockées et correspondent à de vrais besoins, on peut parler de la place de l’humain. Les processus que l’on souhaite automatiser avec l’IA sont aujourd’hui en majorité gérés par un analyste.
+Maintenant que les données sont correctement formatées, stockées et correspondent à de vrais besoins, passons à l’élément le plus important d’un SOC, l’humain 👩🏻‍💻👨🏾‍💻
 
 ## SOC Club : les règles
 
-Le travail d’un analyste est de traiter une alerte afin de décider s’il s’agit d’un faux-positif ou d’une alerte qui présente un risque pour l’entreprise. Après investigation, il apporte de la précision sur la qualité de la règle, pour permettre son tuning ou son amélioration.
+![tyler-durden](/assets/img/blog/2023-10-26-security-is-about-data-oui-mais-pas-que/tyler-durden.gif)
 
-Pour les règles de détection existantes, en cas de faux-positif il doit comprendre les raisons pour lesquelles un évènement a généré l’alerte afin de l’éviter à l’avenir, et si l’alerte est légitime, comment la rendre plus précise et donc exploitable par ses collègues en cas d’incident similaire.
+Le travail d’un analyste est de traiter une alerte afin de décider s’il s’agit d’un faux-positif ou d’un véritable incident, du moins en partie. En effet son travail ne s’arrête pas là.
 
-L’analyste doit également assurer un travail de veille et se tenir au courant des nouvelles vulnérabilités, des techniques d’attaque émergentes, et des stratégies de défense pour maintenir la pertinence du SIEM.
+Pour les règles de détection existantes, en cas de faux-positif il doit comprendre les raisons pour lesquelles la règle s’est déclenchée et apporter les améliorations nécessaires pour éviter que cela ne se reproduise. Il peut s’agir de cas particuliers à whitelister directement sur la règle ou de contexte supplémentaire à apporter sur les logs afin d’être plus précis dans la requête.
 
-Dans tous les cas, un humain est en charge de cette partie qui peut prendre du temps, être répétitive, et mener à la fatigue de l’analyste… À quand le moment où il fantasme sur de la détection automatisée sans erreur ?
+L’analyste doit également assurer un travail de veille et se tenir au courant des nouvelles vulnérabilités et failles, de suivre l’évolution des différents groupes d’attaquants pour développer de nouvelles règles de détection, ou au moins vérifier si celles-ci n’ont pas été déjà été écrites en SIGMA. 2 exemples connus sont les attaques Sunburst et PrintNightmare, où plus de 5 règles de détection ont été mises à disposition de la communauté en seulement 4h.
+
+Dans tous les cas, un humain est en charge de cette partie qui peut prendre du temps, être répétitive et amener au sentiment que toutes ces actions ne servent finalement à rien. Il est donc important de partager le travail de création, correction et d’amélioration de ces règles, cela permet d’aller plus loin en terme de capacités de détection et renforce le sentiment d’utilité des analystes. Le renforcement de ce sentiment allié à la réduction de l’alerte fatigue constitue un puissant atout pour garder une équipe efficace et motivée !
 
 ## Automatisation & AI : Not A Kind Of Magic
 
-L’automatisation et l’IA sont vendues comme des outils magiques qui vont pouvoir répondre à 100% de vos besoins et vous affranchir des analystes. Nombreuses sont les entreprises séduites par ce pitch.
+![freddy-mercury-iwtbf](/assets/img/blog/2023-10-26-security-is-about-data-oui-mais-pas-que/freddy-mercury-iwtbf.gif)
 
-Il est indéniable que ce type d’outil aide les analystes dans leurs tâches, en assurant les parties les plus pénibles de l’analyse en proposant des actions d’administrateur système, ou en proposant des pistes plus rapides à explorer. Ils évitent les actions manuelles et répétitives.
+L’automatisation et l’IA sont vendues comme des outils magiques qui vont pouvoir répondre à 100% de vos alertes et réduire votre taux de faux-positifs à 0%, mais dans les faits c’est un peu plus compliqué.
 
-L’automatisation à 100% est un risque que peu de décideurs sont prêts à prendre en raison des impacts possibles sur la production ou, à l’inverse, le fait de laisser passer une attaque.
+Il est indéniable que ce type d’outil aide les analystes dans leurs tâches, en assurant les parties les plus simples du traitement, en ajoutant du contexte aux alertes ou en redirigeant les alertes directement vers les équipes concernées. Mais elles ne sont pas encore capables de remplacer totalement un être humain.
 
-Une fois encore, ces outils apportent une aide précieuse aux analystes, ils peuvent réduire le nombre d’erreurs et permettre de créer des automatismes dans les actions de réponse. Ils deviendront des alliés pour l’équipe SOC.
+L’automatisation à 100% est un risque que peu de décideurs sont prêts à prendre en raison des impacts que cela peut avoir. On parle bien sur de l’IP Microsoft qui s’est glissée dans une liste de Threat Intelligence, qui sera automatiquement ajoutée à une règle Firewall Block et qui empêchera l’accès à Teams pour toute l’entreprise durant toute une matinée avant qu’on ne trouve l’origine de la panne.
+
+Une fois encore, ces outils apportent une aide précieuse aux analystes, ils peuvent réduire le nombre de tâches fastidieuses qu’ils ont à accomplir mais pas complètement les remplacer.
 
 ## Data Lake & Hunting, la pêche à la grenade ?
 
-Le travail d’un analyste forensic ou d’un threat hunter requiert des compétences et des connaissances plus importantes que celles d’un analyste SOC (niveau 1). Il va créer ses propres signes de détection (IOA, IOB) et la qualité de ses détections dépend de sa capacité à poser les bonnes questions et utiliser les bons outils. C’est particulièrement vrai pour les activités de hunting.
+![freddy-mercury-iwtbf](/assets/img/blog/2023-10-26-security-is-about-data-oui-mais-pas-que/ezgif.com-crop.gif)
 
-Un trop grand nombre de données “polluantes” dans le Data Lake rendra le travail du hunter plus difficile et lui fera perdre du temps. C’est pour cela qu’il est important de maintenir un ensemble de données correctement normalisées, enrichies et filtrées.
 
-L’intervention humaine, assisté par des outils d’IA ou non, est donc toujours nécessaire pour ce type d’activité. On considère que pour être efficace il faut que les données soient réellement utiles et correctement et rapidement exploitables grâce à une normalisation intelligente.
+Le travail d’un analyste forensic ou d’un threat hunter requiert des compétences et des connaissances précises. Il ne s’agit pas de lancer des actions et requêtes au hasard sur un Data Lake et croiser les doigts pour espérer débusquer un acteur malveillant qui se serait caché pendant des semaines.
+
+Un trop grand nombre de données “polluantes” dans le Data Lake rendra le travail du hunter plus difficile, et amènera probablement à l’effet “pêche à la grenade” afin d’espérer avoir la moindre touche avant un découragement total.
+
+L’intervention humaine, assisté par des outils d’IA ou non, est donc toujours nécessaire pour ce type de mission qui nécessite un vrai savoir faire. Cette mission est extrêmement valorisante pour les analystes et hunters en cas de succès !
 
 ## SIEM is not dead, analysts ahead 🤘🏼
 
-Comme dit en introduction, n’hésitez pas à réagir, apporter votre point de vue et vos retours d’expérience. C’est toujours intéressant d’avoir d’autres perspectives sur ces sujets qui évoluent régulièrement.
+Comme dit en introduction, n’hésitez pas à réagir, apporter votre point de vue et vos retours d’expérience !
 
 - ➡️ [LinkedIn](https://www.linkedin.com/company/nybble-security/)
 - ➡️ [Contact](/index.html#contact)

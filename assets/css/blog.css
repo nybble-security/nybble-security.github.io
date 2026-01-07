@@ -4,6 +4,7 @@
 body.blog{background:#ffffff;color:#111}
 header.backdrop-blur{background:#ffffffcc;border-bottom:1px solid #e5e7eb}
 footer{background:#fff;border-top:1px solid #e5e7eb}
+body.blog footer p{color:inherit}
 
 .blog-hero{position:relative;overflow:hidden}
 .blog-hero .content{padding-top:7rem;padding-bottom:5rem}
@@ -15,7 +16,7 @@ footer{background:#fff;border-top:1px solid #e5e7eb}
 .blog-list__title{font-size:1.6rem;font-weight:800;margin:0 0 1rem;color:#111}
 
 /* Article */
-.post{max-width:840px;margin:-3rem auto 0;background:#fff;padding:3rem 1.75rem;border-radius:28px;box-shadow:0 -10px 35px rgba(0,0,0,0.1)}
+.post{max-width:840px;margin:-3rem auto 0;background:#fff;padding:3rem 1.75rem;box-shadow:0 -10px 35px rgba(0,0,0,0.1)}
 .post-header{margin:1rem 0 1.5rem}
 .post-title{font-size:clamp(2rem,5vw,2.75rem);line-height:1.15;font-weight:800;color:#111}
 .post-meta{color:#8a8b8d;text-shadow: 1px 1px black;font-size:.9rem;display:flex;gap:.5rem;align-items:center;margin-top:.5rem}
@@ -27,12 +28,12 @@ footer{background:#fff;border-top:1px solid #e5e7eb}
 .post-body h2{font-size:1.5rem; line-height:1.3; margin:2rem 0 .75rem; font-weight:800; color:#111}
 .post-body h3{font-size:1.25rem; margin:1.5rem 0 .5rem; font-weight:700; color:#111}
 .post-body a{color:#111; text-decoration: underline}
-.post-body ul,.post-body ol{margin:1rem 0 1rem 1.25rem}
+.post-body ul,.post-body ol{margin:1rem 0 1rem 1.25rem;list-style: initial;}
 .post-body li{margin:.4rem 0}
 .post-body blockquote{border-left:3px solid #e5e7eb; padding-left:1rem; color:#374151; font-style:italic}
 .post-body pre{background:#0f172a; color:#e5e7eb; border-radius:.75rem; padding:1rem; overflow:auto}
 .post-body code{background:#f3f4f6; color:#111; padding:.15rem .35rem; border-radius:.35rem}
-.post-body img{border-radius:.75rem;border:1px solid #e5e7eb;max-width:100%}
+.post-body img{border-radius:.75rem;border:1px solid #e5e7eb;max-width:100%;margin: 0 auto}
 
 /* Liste des articles (/blog) */
 .blog-list{max-width:860px;margin:0 auto;padding:2rem 1.25rem}
